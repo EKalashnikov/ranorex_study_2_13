@@ -1,0 +1,16 @@
+﻿<testsuite
+name="StudyRanorex"
+rxversion="5.4.0.24580"
+id="a8ab2674-8ee7-4622-b48b-23d1e20a299c">
+  <content>
+    <testcase name="TestCase" id="df4ccf6f-2562-47c0-a82b-3cd2a448d33b">
+      <testmodule name="Recording1" id="da8fd207-5a50-49b0-8e88-fa049616ea24" ref="3762c054-672a-45f3-ad40-3494825f34bb" type="Recording"/>
+    </testcase>
+  </content>
+  <testconfigurations default="TestRun">
+    <testconfiguration name="TestRun">
+      <testcase id="df4ccf6f-2562-47c0-a82b-3cd2a448d33b"/>
+    </testconfiguration>
+  </testconfigurations>
+  <references/>
+</testsuite>

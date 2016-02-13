@@ -1,0 +1,18 @@
+﻿<repository
+name="StudyRanorexRepository"
+id="1b854c9e-02db-43a3-957b-af5b1784b11c"
+rxversion="5.4.0.24580">
+  <codegen
+  classname="StudyRanorexRepository"
+  namespace="StudyRanorex"/>
+  <rootfolder
+  name="Root"
+  id="5ad22a55-74e6-4bad-aaf6-a920fcbc142f"
+  searchtimeout="30000ms"
+  capname="unknown"
+  isrooted="True"
+  usecache="True">
+    <basepath/>
+  </rootfolder>
+  <variables/>
+</repository>
