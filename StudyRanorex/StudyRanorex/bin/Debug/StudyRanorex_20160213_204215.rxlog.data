@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<report>
+	<activity
+		result="Success"
+		duration="0ms"
+		durationms="0"
+		type="root"
+		rid="4790e64f1ae82fc"
+		totalerrorcount="1"
+		totalwarningcount="1"
+		totalsuccesscount="2"
+		totalfailedcount="1"
+		totalblockedcount="0"
+		user="automation"
+		host="DESKTOP-IP0304R"
+		rxversion="5.4.0.24580"
+		osversion="Windows 10 64bit"
+		runtimeversion="4.0.30319.42000"
+		procarch="32bit"
+		language="en-US"
+		screenresolution="1280x800"
+		timestamp="2/13/2016 8:42:15 PM"
+		timestampiso="2016-02-14T01:42:15"
+		timeoutfactor="1">
+		<detail>
+			Ranorex Testscript
+		</detail>
+		<activity
+			result="Failed"
+			duration="1.3m"
+			durationms="80250"
+			type="test suite"
+			rid="18e4499d535ff0ae"
+			totalerrorcount="1"
+			totalwarningcount="1"
+			totalsuccesscount="2"
+			totalfailedcount="1"
+			totalblockedcount="0"
+			testsuitename="StudyRanorex"
+			runconfigname="TestRun"
+			runlabel=""
+			maxchildren="3">
+			<params/>
+			<detail>
+			</detail>
+			<activity
+				result="Success"
+				duration="31ms"
+				durationms="31"
+				type="test case"
+				rid="ce1caec174a4036"
+				totalerrorcount="0"
+				totalwarningcount="0"
+				totalsuccesscount="1"
+				totalfailedcount="0"
+				totalblockedcount="0"
+				testcasename="TestCase"
+				testcaseid="df4ccf6f-2562-47c0-a82b-3cd2a448d33b"
+				maxchildren="0">
+				<params/>
+				<detail>
+				</detail>
+				<activity
+					result="Success"
+					duration="0ms"
+					durationms="0"
+					type="test module"
+					rid="ae391edffe8ab9f"
+					totalerrorcount="0"
+					totalwarningcount="0"
+					totalsuccesscount="0"
+					totalfailedcount="0"
+					totalblockedcount="0"
+					modulename="Recording1"
+					moduleid="3762c054-672a-45f3-ad40-3494825f34bb"
+					moduletype="Recording">
+					<detail>
+					</detail>
+					<varbindings/>
+				</activity>
+			</activity>
+			<activity
+				result="Success"
+				duration="547ms"
+				durationms="547"
+				type="test case"
+				rid="10f749ea6afa344e"
+				totalerrorcount="0"
+				totalwarningcount="0"
+				totalsuccesscount="1"
+				totalfailedcount="0"
+				totalblockedcount="0"
+				testcasename="OpenAA"
+				testcaseid="3cdb1cbe-2784-451d-b695-ef465dda7dc0"
+				maxchildren="0">
+				<params/>
+				<detail>
+				</detail>
+				<activity
+					result="Success"
+					duration="172ms"
+					durationms="172"
+					type="test module"
+					rid="7a4d476ccbe28"
+					totalerrorcount="0"
+					totalwarningcount="0"
+					totalsuccesscount="0"
+					totalfailedcount="0"
+					totalblockedcount="0"
+					modulename="OpenBrowser"
+					moduleid="f75b2692-1135-426f-b578-6047ed5e335e"
+					moduletype="UserCode">
+					<detail>
+					</detail>
+					<varbindings/>
+				</activity>
+			</activity>
+			<activity
+				result="Failed"
+				duration="1.3m"
+				durationms="78339"
+				type="test case"
+				rid="159f30aa193a6dc8"
+				totalerrorcount="1"
+				totalwarningcount="1"
+				totalsuccesscount="0"
+				totalfailedcount="1"
+				totalblockedcount="0"
+				testcasename="Login"
+				testcaseid="070d55a8-8b1b-44d2-b9e9-c7af295e3e46"
+				maxchildren="0">
+				<params/>
+				<detail>
+				</detail>
+				<activity
+					result="Failed"
+					duration="1.3m"
+					durationms="78012"
+					type="test module"
+					rid="5824a3dbdf5c9d0"
+					totalerrorcount="1"
+					totalwarningcount="1"
+					totalsuccesscount="0"
+					totalfailedcount="0"
+					totalblockedcount="0"
+					modulename="LoginModule"
+					moduleid="c3f82d89-8032-43e0-b269-57e0ed096d53"
+					moduletype="UserCode">
+					<detail>
+					</detail>
+					<errmsg>
+						Item 'StudyRanorexRepository.AmericanAirlines.Popup.btnClosePopup' is no Button.
+					</errmsg>
+					<varbindings/>
+					<item
+						timeRelativeToTestSuiteStartTime="01:20.312"
+						timeRelativeToTestModuleStartTime="01:17.794"
+						timeWallClock="20:43:35"
+						time="01:20.312"
+						level="Warn"
+						category="Repository"
+						errimg="images_StudyRanorex_20160213_204215\StudyRanorex_20160213_204215_94c94dc5_trace.jpg"
+						errthumb="images_StudyRanorex_20160213_204215\StudyRanorex_20160213_204215_94c94dc5_trace_thumb.jpg">
+						<message>
+							Item 'StudyRanorexRepository.AmericanAirlines.Popup.btnClosePopup' could be found using its absolute path, but not using its relative path from the cached element of parent folder 'StudyRanorexRepository.AmericanAirlines'. This can happen if either the item search timeout is too small or if items within a rooted folder do not share a common parent element. To fix this problem, first increase the item search timeout. If this does not help, create a separate rooted folder for this item or disable caching for the specified folder.
+						</message>
+						<metainfo
+							codefile="c:\Users\automation\Documents\ranorex_study_2_13\StudyRanorex\StudyRanorex\LoginModule.cs"
+							codeline="65"
+							loglvl="Warn"/>
+					</item>
+					<item
+						timeRelativeToTestSuiteStartTime="01:20.374"
+						timeRelativeToTestModuleStartTime="01:17.856"
+						timeWallClock="20:43:36"
+						time="01:20.374"
+						level="Error"
+						category="Module"
+						errimg="images_StudyRanorex_20160213_204215\StudyRanorex_20160213_204215_cc4ef129_trace.jpg"
+						errthumb="images_StudyRanorex_20160213_204215\StudyRanorex_20160213_204215_cc4ef129_trace_thumb.jpg">
+						<message>
+							Item 'StudyRanorexRepository.AmericanAirlines.Popup.btnClosePopup' is no Button.<br/>The element does not support the required capability 'button'.
+						</message>
+						<metainfo
+							stacktrace="   at Ranorex.Core.Repository.RepoItemInfo.Find[T](Boolean findSingle, Boolean throwException, Duration effectiveTimeoutOverride)
+   at Ranorex.Core.Repository.RepoItemInfo.CreateAdapter[T](Boolean throwException, Duration waitTimeout)
+   at Ranorex.Core.Repository.RepoItemInfo.CreateAdapter[T](Boolean throwException)
+   at StudyRanorex.StudyRanorexRepositoryFolders.PopupFolder.get_btnClosePopup() in c:\Users\automation\Documents\ranorex_study_2_13\StudyRanorex\StudyRanorex\StudyRanorexRepository.cs:line 414
+   at StudyRanorex.LoginModule.Ranorex.Core.Testing.ITestModule.Run() in c:\Users\automation\Documents\ranorex_study_2_13\StudyRanorex\StudyRanorex\LoginModule.cs:line 65
+   at Ranorex.Core.Testing.TestSuiteModule.RunInternal(DataContext parentDataContext)"
+							codefile="c:\Users\automation\Documents\ranorex_study_2_13\StudyRanorex\StudyRanorex\LoginModule.cs"
+							codeline="65"
+							loglvl="Error"/>
+					</item>
+				</activity>
+			</activity>
+		</activity>
+	</activity>
+</report>

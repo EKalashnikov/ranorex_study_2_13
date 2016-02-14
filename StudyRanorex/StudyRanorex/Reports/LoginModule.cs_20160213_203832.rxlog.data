@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<report>
+	<activity
+		result="Failed"
+		duration="0ms"
+		durationms="0"
+		type="root"
+		rid="1ad9d79434a1ad94"
+		totalerrorcount="1"
+		totalwarningcount="1"
+		totalsuccesscount="0"
+		totalfailedcount="0"
+		totalblockedcount="0"
+		user="automation"
+		host="DESKTOP-IP0304R"
+		rxversion="5.4.0.24580"
+		osversion="Windows 10 64bit"
+		runtimeversion="4.0.30319.42000"
+		procarch="32bit"
+		language="en-US"
+		screenresolution="1280x800"
+		timestamp="2/13/2016 8:38:44 PM"
+		timestampiso="2016-02-14T01:38:44"
+		timeoutfactor="1"
+		module="LoginModule">
+		<detail>
+			LoginModule
+		</detail>
+		<errmsg>
+			Item 'StudyRanorexRepository.AmericanAirlines.Popup.btnClosePopup' is no Button.
+		</errmsg>
+		<varbindings/>
+		<item
+			timeRelativeToTestSuiteStartTime="01:10.203"
+			timeRelativeToTestModuleStartTime="01:10.203"
+			timeWallClock="20:39:54"
+			time="01:10.203"
+			level="Warn"
+			category="Repository"
+			errimg=".\LoginModule.cs_20160213_203832_ee73819f_trace.jpg"
+			errthumb=".\LoginModule.cs_20160213_203832_ee73819f_trace_thumb.jpg">
+			<message>
+				Item 'StudyRanorexRepository.AmericanAirlines.Popup.btnClosePopup' could be found using its absolute path, but not using its relative path from the cached element of parent folder 'StudyRanorexRepository.AmericanAirlines'. This can happen if either the item search timeout is too small or if items within a rooted folder do not share a common parent element. To fix this problem, first increase the item search timeout. If this does not help, create a separate rooted folder for this item or disable caching for the specified folder.
+			</message>
+			<metainfo
+				codefile="c:\Users\automation\Documents\ranorex_study_2_13\StudyRanorex\StudyRanorex\LoginModule.cs"
+				codeline="63"
+				loglvl="Warn"/>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="01:10.249"
+			timeRelativeToTestModuleStartTime="01:10.249"
+			timeWallClock="20:39:54"
+			time="01:10.249"
+			level="Error"
+			category="Module"
+			errimg=".\LoginModule.cs_20160213_203832_ee73819f_trace.jpg"
+			errthumb=".\LoginModule.cs_20160213_203832_ee73819f_trace_thumb.jpg">
+			<message>
+				Item 'StudyRanorexRepository.AmericanAirlines.Popup.btnClosePopup' is no Button.<br/>The element does not support the required capability 'button'.
+			</message>
+			<metainfo
+				stacktrace="   at Ranorex.Core.Repository.RepoItemInfo.Find[T](Boolean findSingle, Boolean throwException, Duration effectiveTimeoutOverride)
+   at Ranorex.Core.Repository.RepoItemInfo.CreateAdapter[T](Boolean throwException, Duration waitTimeout)
+   at Ranorex.Core.Repository.RepoItemInfo.CreateAdapter[T](Boolean throwException)
+   at StudyRanorex.StudyRanorexRepositoryFolders.PopupFolder.get_btnClosePopup() in c:\Users\automation\Documents\ranorex_study_2_13\StudyRanorex\StudyRanorex\StudyRanorexRepository.cs:line 414
+   at StudyRanorex.LoginModule.Ranorex.Core.Testing.ITestModule.Run() in c:\Users\automation\Documents\ranorex_study_2_13\StudyRanorex\StudyRanorex\LoginModule.cs:line 63
+   at Ranorex.Core.Testing.TestSuiteModule.RunInternal(DataContext parentDataContext)"
+				codefile="c:\Users\automation\Documents\ranorex_study_2_13\StudyRanorex\StudyRanorex\LoginModule.cs"
+				codeline="63"
+				loglvl="Error"/>
+		</item>
+	</activity>
+</report>

@@ -1,0 +1,8 @@
+C:\Users\automation\Documents\ranorex_study_2_13\StudyRanorex\StudyRanorex\bin\Debug\StudyRanorex.rxtmg
+C:\Users\automation\Documents\ranorex_study_2_13\StudyRanorex\StudyRanorex\bin\Debug\StudyRanorex.rxtst
+C:\Users\automation\Documents\ranorex_study_2_13\StudyRanorex\StudyRanorex\bin\Debug\StudyRanorex.exe.config
+C:\Users\automation\Documents\ranorex_study_2_13\StudyRanorex\StudyRanorex\bin\Debug\StudyRanorex.exe
+C:\Users\automation\Documents\ranorex_study_2_13\StudyRanorex\StudyRanorex\bin\Debug\StudyRanorex.pdb
+C:\Users\automation\Documents\ranorex_study_2_13\StudyRanorex\StudyRanorex\obj\x86\Debug\StudyRanorex.csprojResolveAssemblyReference.cache
+C:\Users\automation\Documents\ranorex_study_2_13\StudyRanorex\StudyRanorex\obj\x86\Debug\StudyRanorex.exe
+C:\Users\automation\Documents\ranorex_study_2_13\StudyRanorex\StudyRanorex\obj\x86\Debug\StudyRanorex.pdb
