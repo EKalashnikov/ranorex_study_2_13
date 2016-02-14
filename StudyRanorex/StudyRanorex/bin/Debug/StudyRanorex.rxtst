@@ -15,15 +15,6 @@ TracingScreenshotQuality="40"
 reportlevel="Info;20">
 	<content>
 		<testcase
-		name="TestCase"
-		id="df4ccf6f-2562-47c0-a82b-3cd2a448d33b">
-			<testmodule
-			name="Recording1"
-			id="da8fd207-5a50-49b0-8e88-fa049616ea24"
-			ref="3762c054-672a-45f3-ad40-3494825f34bb"
-			type="Recording"/>
-		</testcase>
-		<testcase
 		name="OpenAA"
 		id="3cdb1cbe-2784-451d-b695-ef465dda7dc0">
 			<testmodule
@@ -33,7 +24,7 @@ reportlevel="Info;20">
 			type="UserCode"/>
 		</testcase>
 		<testcase
-		name="Login"
+		name="LoginWrongCredsTest"
 		id="070d55a8-8b1b-44d2-b9e9-c7af295e3e46">
 			<testmodule
 			name="LoginModule"
@@ -52,8 +43,6 @@ reportlevel="Info;20">
 			id="3cdb1cbe-2784-451d-b695-ef465dda7dc0"/>
 			<testcase
 			id="a8ab2674-8ee7-4622-b48b-23d1e20a299c"/>
-			<testcase
-			id="df4ccf6f-2562-47c0-a82b-3cd2a448d33b"/>
 		</testconfiguration>
 	</testconfigurations>
 	<references/>

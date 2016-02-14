@@ -15,15 +15,6 @@ TracingScreenshotQuality="40"
 reportlevel="Info;20">
 	<content>
 		<testcase
-		name="TestCase"
-		id="df4ccf6f-2562-47c0-a82b-3cd2a448d33b">
-			<testmodule
-			name="Recording1"
-			id="da8fd207-5a50-49b0-8e88-fa049616ea24"
-			ref="3762c054-672a-45f3-ad40-3494825f34bb"
-			type="Recording"/>
-		</testcase>
-		<testcase
 		name="OpenAA"
 		id="3cdb1cbe-2784-451d-b695-ef465dda7dc0">
 			<testmodule
@@ -33,12 +24,21 @@ reportlevel="Info;20">
 			type="UserCode"/>
 		</testcase>
 		<testcase
-		name="Login"
+		name="LoginWrongCreds"
 		id="070d55a8-8b1b-44d2-b9e9-c7af295e3e46">
 			<testmodule
 			name="LoginModule"
 			id="2c9c3f3f-58a7-4aae-a0cb-c10e603ee8bd"
 			ref="c3f82d89-8032-43e0-b269-57e0ed096d53"
+			type="UserCode"/>
+		</testcase>
+		<testcase
+		name="TicketsSearch"
+		id="a9431c76-ed46-40ff-8372-d28d019f2697">
+			<testmodule
+			name="FLL_SVO"
+			id="bdc6cfa8-fbfc-466a-a56b-a3a2680fd779"
+			ref="f5226f6d-9f9c-4f63-9b73-5881852d4a42"
 			type="UserCode"/>
 		</testcase>
 	</content>
@@ -53,7 +53,7 @@ reportlevel="Info;20">
 			<testcase
 			id="a8ab2674-8ee7-4622-b48b-23d1e20a299c"/>
 			<testcase
-			id="df4ccf6f-2562-47c0-a82b-3cd2a448d33b"/>
+			id="a9431c76-ed46-40ff-8372-d28d019f2697"/>
 		</testconfiguration>
 	</testconfigurations>
 	<references/>

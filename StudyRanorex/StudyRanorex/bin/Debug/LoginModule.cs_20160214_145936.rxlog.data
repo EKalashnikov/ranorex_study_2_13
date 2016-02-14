@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<report>
+	<activity
+		result="Failed"
+		duration="0ms"
+		durationms="0"
+		type="root"
+		rid="1225d7c1b1197378"
+		totalerrorcount="1"
+		totalwarningcount="0"
+		totalsuccesscount="0"
+		totalfailedcount="0"
+		totalblockedcount="0"
+		user="automation"
+		host="DESKTOP-IP0304R"
+		rxversion="5.4.0.24580"
+		osversion="Windows 10 64bit"
+		runtimeversion="4.0.30319.42000"
+		procarch="32bit"
+		language="en-US"
+		screenresolution="1024x768"
+		timestamp="2/14/2016 2:59:49 PM"
+		timestampiso="2016-02-14T19:59:49"
+		timeoutfactor="1"
+		module="LoginModule">
+		<detail>
+			LoginModule
+		</detail>
+		<varbindings/>
+		<item
+			timeRelativeToTestSuiteStartTime="01:45.092"
+			timeRelativeToTestModuleStartTime="01:45.108"
+			timeWallClock="15:01:34"
+			time="01:45.092"
+			level="Error"
+			category="Module">
+			<message>
+				Test run was aborted by the user.
+			</message>
+			<metainfo
+				loglvl="Error"/>
+		</item>
+	</activity>
+</report>

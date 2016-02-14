@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<report>
+	<activity
+		result="Success"
+		duration="0ms"
+		durationms="0"
+		type="root"
+		rid="17d4a332c7cfff4"
+		totalerrorcount="0"
+		totalwarningcount="0"
+		totalsuccesscount="2"
+		totalfailedcount="0"
+		totalblockedcount="0"
+		user="automation"
+		host="DESKTOP-IP0304R"
+		rxversion="5.4.0.24580"
+		osversion="Windows 10 64bit"
+		runtimeversion="4.0.30319.42000"
+		procarch="32bit"
+		language="en-US"
+		screenresolution="1024x768"
+		timestamp="2/14/2016 4:04:04 PM"
+		timestampiso="2016-02-14T21:04:04"
+		timeoutfactor="1">
+		<detail>
+			Ranorex Testscript
+		</detail>
+		<activity
+			result="Success"
+			duration="59.68s"
+			durationms="59677"
+			type="test suite"
+			rid="11c05720fdd7c1a0"
+			totalerrorcount="0"
+			totalwarningcount="0"
+			totalsuccesscount="2"
+			totalfailedcount="0"
+			totalblockedcount="0"
+			testsuitename="StudyRanorex"
+			runconfigname="TestRun"
+			runlabel=""
+			maxchildren="2">
+			<params/>
+			<detail>
+			</detail>
+			<activity
+				result="Success"
+				duration="1328ms"
+				durationms="1328"
+				type="test case"
+				rid="e405b41a0f6706c"
+				totalerrorcount="0"
+				totalwarningcount="0"
+				totalsuccesscount="1"
+				totalfailedcount="0"
+				totalblockedcount="0"
+				testcasename="OpenAA"
+				testcaseid="3cdb1cbe-2784-451d-b695-ef465dda7dc0"
+				maxchildren="0">
+				<params/>
+				<detail>
+				</detail>
+				<activity
+					result="Success"
+					duration="717ms"
+					durationms="717"
+					type="test module"
+					rid="efe46976ec49222"
+					totalerrorcount="0"
+					totalwarningcount="0"
+					totalsuccesscount="0"
+					totalfailedcount="0"
+					totalblockedcount="0"
+					modulename="OpenBrowser"
+					moduleid="f75b2692-1135-426f-b578-6047ed5e335e"
+					moduletype="UserCode">
+					<detail>
+					</detail>
+					<varbindings/>
+				</activity>
+			</activity>
+			<activity
+				result="Success"
+				duration="57.8s"
+				durationms="57803"
+				type="test case"
+				rid="df7e7e6bbebe6f6"
+				totalerrorcount="0"
+				totalwarningcount="0"
+				totalsuccesscount="1"
+				totalfailedcount="0"
+				totalblockedcount="0"
+				testcasename="LoginWrongCredsTest"
+				testcaseid="070d55a8-8b1b-44d2-b9e9-c7af295e3e46"
+				maxchildren="0">
+				<params/>
+				<detail>
+				</detail>
+				<activity
+					result="Success"
+					duration="57.26s"
+					durationms="57258"
+					type="test module"
+					rid="f71c5c78c152a94"
+					totalerrorcount="0"
+					totalwarningcount="0"
+					totalsuccesscount="0"
+					totalfailedcount="0"
+					totalblockedcount="0"
+					modulename="LoginModule"
+					moduleid="c3f82d89-8032-43e0-b269-57e0ed096d53"
+					moduletype="UserCode">
+					<detail>
+					</detail>
+					<varbindings/>
+					<item
+						timeRelativeToTestSuiteStartTime="00:57.000"
+						timeRelativeToTestModuleStartTime="00:54.953"
+						timeWallClock="16:05:01"
+						time="00:57.000"
+						level="Success"
+						category="Validation">
+						<message>
+							Element for item 'txtCantLogin' does exist.
+						</message>
+						<metainfo
+							type="repoitem"
+							path="/dom[@domain='www.aa.com']/body/div/div[@id='loginMainErrorMsgDialog']/div/p[@innertext~'couldn''t\ log' and @innertext~'account']"
+							fullname="StudyRanorexRepository.AmericanAirlines.WrongCredsPage.Popup.txtCantLogin"
+							id="6e3206ca1d464d6191cfba63b0026456"
+							timeout="120000"
+							codefile="c:\Users\automation\Documents\ranorex_study_2_13\StudyRanorex\StudyRanorex\LoginModule.cs"
+							codeline="64"
+							loglvl="Success"/>
+					</item>
+				</activity>
+			</activity>
+		</activity>
+	</activity>
+</report>

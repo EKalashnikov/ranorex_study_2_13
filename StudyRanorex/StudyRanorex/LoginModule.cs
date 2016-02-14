@@ -50,21 +50,22 @@ namespace StudyRanorex
             Mouse.ScrollWheel(500);
             
             
-            repo.AmericanAirlines.Content.LoginPanel.FieldUserName.Click();
-            repo.AmericanAirlines.Content.LoginPanel.FieldUserName.PressKeys("username");
-            repo.AmericanAirlines.Content.LoginPanel.FieldLastName.Click();
-            repo.AmericanAirlines.Content.LoginPanel.FieldLastName.PressKeys("lastname");
-            repo.AmericanAirlines.Content.LoginPanel.FieldPwd.Click();
-            repo.AmericanAirlines.Content.LoginPanel.FieldPwd.PressKeys("pwd");
-            repo.AmericanAirlines.Content.LoginPanel.BtnLogIn.Click();
+            repo.AmericanAirlines.HomePage.LoginPanel.FieldUserName.Click();
+            repo.AmericanAirlines.HomePage.LoginPanel.FieldUserName.PressKeys("username");
+            repo.AmericanAirlines.HomePage.LoginPanel.FieldLastName.Click();
+            repo.AmericanAirlines.HomePage.LoginPanel.FieldLastName.PressKeys("lastname");
+            repo.AmericanAirlines.HomePage.LoginPanel.FieldPwd.Click();
+            repo.AmericanAirlines.HomePage.LoginPanel.FieldPwd.PressKeys("pwd");
+            repo.AmericanAirlines.HomePage.LoginPanel.BtnLogIn.Click();
             
             //Delay.Duration(new Duration(10));
-            //Validate.Exists(repo.AmericanAirlines.Popup.txtCantLoginInfo);
+            //Delay.Milliseconds(1999);
+            repo.AmericanAirlines.WrongCredsPage.Popup.txtCantLogin.MoveTo();
+            Validate.Exists(repo.AmericanAirlines.WrongCredsPage.Popup.txtCantLoginInfo);
+            repo.AmericanAirlines.WrongCredsPage.Popup.btnClosePopup.Click();
+                       
+            repo.AmericanAirlines.WrongCredsPage.MainPage.HomePageLink.Click();
             
-            Delay.Milliseconds(1999);
-            //repo.AmericanAirlines.Popup.txtCantLogin.MoveTo();
-            //repo.AmericanAirlines.Popup.btnClosePopup.Click();
-            repo.NewApp.btnNew.Click();
             
             	
             	

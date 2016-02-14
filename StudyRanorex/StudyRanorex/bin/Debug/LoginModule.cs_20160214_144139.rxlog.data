@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<report>
+	<activity
+		result="Success"
+		duration="0ms"
+		durationms="0"
+		type="root"
+		rid="6bb399646b8a599"
+		totalerrorcount="0"
+		totalwarningcount="1"
+		totalsuccesscount="0"
+		totalfailedcount="0"
+		totalblockedcount="0"
+		user="automation"
+		host="DESKTOP-IP0304R"
+		rxversion="5.4.0.24580"
+		osversion="Windows 10 64bit"
+		runtimeversion="4.0.30319.42000"
+		procarch="32bit"
+		language="en-US"
+		screenresolution="1024x768"
+		timestamp="2/14/2016 2:41:52 PM"
+		timestampiso="2016-02-14T19:41:52"
+		timeoutfactor="1"
+		module="LoginModule">
+		<detail>
+			LoginModule
+		</detail>
+		<varbindings/>
+		<item
+			timeRelativeToTestSuiteStartTime="01:49.172"
+			timeRelativeToTestModuleStartTime="01:49.172"
+			timeWallClock="14:43:41"
+			time="01:49.172"
+			level="Warn"
+			category="Repository">
+			<message>
+				Item 'StudyRanorexRepository.AmericanAirlines.WrongCredsPage.Popup.txtCantLogin' could be found using its absolute path, but not using its relative path from the cached element of parent folder 'StudyRanorexRepository.AmericanAirlines'. This can happen if either the item search timeout is too small or if items within a rooted folder do not share a common parent element. To fix this problem, first increase the item search timeout. If this does not help, create a separate rooted folder for this item or disable caching for the specified folder.
+			</message>
+			<metainfo
+				codefile="c:\Users\automation\Documents\ranorex_study_2_13\StudyRanorex\StudyRanorex\LoginModule.cs"
+				codeline="63"
+				loglvl="Warn"/>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="01:49.344"
+			timeRelativeToTestModuleStartTime="01:49.344"
+			timeWallClock="14:43:42"
+			time="01:49.344"
+			level="Success"
+			category="Validation">
+			<message>
+				Element for item 'txtCantLogin' does exist.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/dom[@domain='www.aa.com']/body/div/div[@id='loginMainErrorMsgDialog']/div/p[@innertext~'couldn''t\ log' and @innertext~'account']"
+				fullname="StudyRanorexRepository.AmericanAirlines.WrongCredsPage.Popup.txtCantLogin"
+				id="6e3206ca1d464d6191cfba63b0026456"
+				timeout="120000"
+				codefile="c:\Users\automation\Documents\ranorex_study_2_13\StudyRanorex\StudyRanorex\LoginModule.cs"
+				codeline="63"
+				loglvl="Success"/>
+		</item>
+	</activity>
+</report>

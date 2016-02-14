@@ -16,11 +16,11 @@ rxversion="5.4.0.24580">
 		name="AmericanAirlines"
 		id="70dbb9a2-f881-4f7b-a76f-62f9a618a5e1"
 		searchtimeout="30000ms"
-		capname="bodytag"
+		capname="webdocument"
 		isrooted="True"
 		usecache="True">
 			<folder
-			name="Content"
+			name="HomePage"
 			id="4febf9ac-860d-4e4e-a9b3-82284527af20"
 			searchtimeout="30000ms"
 			capname="divtag"
@@ -70,50 +70,61 @@ rxversion="5.4.0.24580">
 				</basepath>
 			</folder>
 			<folder
-			name="Popup"
-			id="b46993ad-c934-4149-8cf6-150ac9cfb3ca"
+			name="WrongCredsPage"
+			id="d21b4a32-4a9b-4e9f-bc86-9d923ff6bb8d"
 			searchtimeout="30000ms"
-			capname="divtag"
+			capname="bodytag"
 			isrooted="True"
 			usecache="False">
-				<item
-				name="txtCantLogin"
-				id="6e3206ca-1d46-4d61-91cf-ba63b0026456"
+				<folder
+				name="Popup"
+				id="b46993ad-c934-4149-8cf6-150ac9cfb3ca"
 				searchtimeout="30000ms"
-				capname="ptag">
-					/dom[@domain='www.aa.com']/body/div/div[@id='loginMainErrorMsgDialog']/div/p[@innertext~'couldn''t\ log' and @innertext~'account']
-				</item>
-				<item
-				name="btnClosePopup"
-				id="ad61ebc8-f2b0-4793-bb1c-64347906e709"
+				capname="divtag"
+				isrooted="True"
+				usecache="False">
+					<item
+					name="txtCantLogin"
+					id="6e3206ca-1d46-4d61-91cf-ba63b0026456"
+					searchtimeout="30000ms"
+					capname="ptag">
+						/dom[@domain='www.aa.com']/body/div/div[@id='loginMainErrorMsgDialog']/div/p[@innertext~'couldn''t\ log' and @innertext~'account']
+					</item>
+					<item
+					name="btnClosePopup"
+					id="ad61ebc8-f2b0-4793-bb1c-64347906e709"
+					searchtimeout="30000ms"
+					capname="spantag">
+						/dom[@domain='www.aa.com']/body/div/div/div/button[#'loginMainErrorMsgDialogButton0']/span
+					</item>
+					<basepath>
+						/dom[@domain='www.aa.com']/body/div
+					</basepath>
+				</folder>
+				<folder
+				name="MainPage"
+				id="df1911a2-cc50-4bef-9f75-c2b02278099d"
 				searchtimeout="30000ms"
-				capname="button">
-					/dom[@domain='www.aa.com']/body/div/div/div/button[#'loginMainErrorMsgDialogButton0']
-				</item>
+				capname="divtag"
+				isrooted="True"
+				usecache="False">
+					<item
+					name="HomePageLink"
+					id="07be59b2-ba39-4b1b-9ab4-3c937497ae5a"
+					searchtimeout="30000ms"
+					capname="imgtag">
+						/dom[@domain='www.aa.com']/body/header/div/div[#'main-navigation']/a[@href='https://www.aa.com/homePage.do']/img
+					</item>
+					<basepath>
+						/dom[@domain='www.aa.com']/body/header/div
+					</basepath>
+				</folder>
 				<basepath>
-					/dom[@domain='www.aa.com']/body/div
+					/dom[@domain='www.aa.com']/body
 				</basepath>
 			</folder>
 			<basepath>
-				/dom[@domain='www.aa.com']/body
-			</basepath>
-		</appfolder>
-		<appfolder
-		name="NewApp"
-		id="b6ba7538-a497-4f07-8609-442335151e4d"
-		searchtimeout="30000ms"
-		capname="divtag"
-		isrooted="True"
-		usecache="True">
-			<item
-			name="btnNew"
-			id="2e2c8ff8-d842-4062-8c0a-c911dbb25d46"
-			searchtimeout="30000ms"
-			capname="spantag">
-				/dom[@domain='www.aa.com']/body/div/div/div/button[#'loginMainErrorMsgDialogButton0']/span
-			</item>
-			<basepath>
-				/dom[@domain='www.aa.com']/body/div/div/div
+				/dom[@domain='www.aa.com']
 			</basepath>
 		</appfolder>
 		<basepath/>

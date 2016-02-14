@@ -28,7 +28,6 @@ namespace StudyRanorex
     {
         static StudyRanorexRepository instance = new StudyRanorexRepository();
         StudyRanorexRepositoryFolders.AmericanAirlinesAppFolder _americanairlines;
-        StudyRanorexRepositoryFolders.NewAppAppFolder _newapp;
 
         /// <summary>
         /// Gets the singleton class instance representing the StudyRanorexRepository element repository.
@@ -46,7 +45,6 @@ namespace StudyRanorex
             : base("StudyRanorexRepository", "/", null, 0, false, "5ad22a55-74e6-4bad-aaf6-a920fcbc142f", ".\\RepositoryImages\\StudyRanorexRepository5ad22a55.rximgres")
         {
             _americanairlines = new StudyRanorexRepositoryFolders.AmericanAirlinesAppFolder(this);
-            _newapp = new StudyRanorexRepositoryFolders.NewAppAppFolder(this);
         }
 
 #region Variables
@@ -73,15 +71,6 @@ namespace StudyRanorex
         {
             get { return _americanairlines; }
         }
-
-        /// <summary>
-        /// The NewApp folder.
-        /// </summary>
-        [RepositoryFolder("b6ba7538-a497-4f07-8609-442335151e4d")]
-        public virtual StudyRanorexRepositoryFolders.NewAppAppFolder NewApp
-        {
-            get { return _newapp; }
-        }
     }
 
     /// <summary>
@@ -96,28 +85,28 @@ namespace StudyRanorex
         [RepositoryFolder("70dbb9a2-f881-4f7b-a76f-62f9a618a5e1")]
         public partial class AmericanAirlinesAppFolder : RepoGenBaseFolder
         {
-            StudyRanorexRepositoryFolders.ContentFolder _content;
-            StudyRanorexRepositoryFolders.PopupFolder _popup;
+            StudyRanorexRepositoryFolders.HomePageFolder _homepage;
+            StudyRanorexRepositoryFolders.WrongCredsPageFolder _wrongcredspage;
 
             /// <summary>
             /// Creates a new AmericanAirlines  folder.
             /// </summary>
             public AmericanAirlinesAppFolder(RepoGenBaseFolder parentFolder) :
-                    base("AmericanAirlines", "/dom[@domain='www.aa.com']/body", parentFolder, 30000, null, true, "70dbb9a2-f881-4f7b-a76f-62f9a618a5e1", "")
+                    base("AmericanAirlines", "/dom[@domain='www.aa.com']", parentFolder, 30000, null, true, "70dbb9a2-f881-4f7b-a76f-62f9a618a5e1", "")
             {
-                _content = new StudyRanorexRepositoryFolders.ContentFolder(this);
-                _popup = new StudyRanorexRepositoryFolders.PopupFolder(this);
+                _homepage = new StudyRanorexRepositoryFolders.HomePageFolder(this);
+                _wrongcredspage = new StudyRanorexRepositoryFolders.WrongCredsPageFolder(this);
             }
 
             /// <summary>
             /// The Self item.
             /// </summary>
             [RepositoryItem("70dbb9a2-f881-4f7b-a76f-62f9a618a5e1")]
-            public virtual Ranorex.BodyTag Self
+            public virtual Ranorex.WebDocument Self
             {
                 get
                 {
-                    return _selfInfo.CreateAdapter<Ranorex.BodyTag>(true);
+                    return _selfInfo.CreateAdapter<Ranorex.WebDocument>(true);
                 }
             }
 
@@ -134,37 +123,37 @@ namespace StudyRanorex
             }
 
             /// <summary>
-            /// The Content folder.
+            /// The HomePage folder.
             /// </summary>
             [RepositoryFolder("4febf9ac-860d-4e4e-a9b3-82284527af20")]
-            public virtual StudyRanorexRepositoryFolders.ContentFolder Content
+            public virtual StudyRanorexRepositoryFolders.HomePageFolder HomePage
             {
-                get { return _content; }
+                get { return _homepage; }
             }
 
             /// <summary>
-            /// The Popup folder.
+            /// The WrongCredsPage folder.
             /// </summary>
-            [RepositoryFolder("b46993ad-c934-4149-8cf6-150ac9cfb3ca")]
-            public virtual StudyRanorexRepositoryFolders.PopupFolder Popup
+            [RepositoryFolder("d21b4a32-4a9b-4e9f-bc86-9d923ff6bb8d")]
+            public virtual StudyRanorexRepositoryFolders.WrongCredsPageFolder WrongCredsPage
             {
-                get { return _popup; }
+                get { return _wrongcredspage; }
             }
         }
 
         /// <summary>
-        /// The ContentFolder folder.
+        /// The HomePageFolder folder.
         /// </summary>
         [RepositoryFolder("4febf9ac-860d-4e4e-a9b3-82284527af20")]
-        public partial class ContentFolder : RepoGenBaseFolder
+        public partial class HomePageFolder : RepoGenBaseFolder
         {
             StudyRanorexRepositoryFolders.LoginPanelFolder _loginpanel;
 
             /// <summary>
-            /// Creates a new Content  folder.
+            /// Creates a new HomePage  folder.
             /// </summary>
-            public ContentFolder(RepoGenBaseFolder parentFolder) :
-                    base("Content", "section/div/div/div/div/div/div[@class='row']", parentFolder, 30000, null, false, "4febf9ac-860d-4e4e-a9b3-82284527af20", "")
+            public HomePageFolder(RepoGenBaseFolder parentFolder) :
+                    base("HomePage", "body/section/div/div/div/div/div/div[@class='row']", parentFolder, 30000, null, false, "4febf9ac-860d-4e4e-a9b3-82284527af20", "")
             {
                 _loginpanel = new StudyRanorexRepositoryFolders.LoginPanelFolder(this);
             }
@@ -348,6 +337,68 @@ namespace StudyRanorex
         }
 
         /// <summary>
+        /// The WrongCredsPageFolder folder.
+        /// </summary>
+        [RepositoryFolder("d21b4a32-4a9b-4e9f-bc86-9d923ff6bb8d")]
+        public partial class WrongCredsPageFolder : RepoGenBaseFolder
+        {
+            StudyRanorexRepositoryFolders.PopupFolder _popup;
+            StudyRanorexRepositoryFolders.MainPageFolder _mainpage;
+
+            /// <summary>
+            /// Creates a new WrongCredsPage  folder.
+            /// </summary>
+            public WrongCredsPageFolder(RepoGenBaseFolder parentFolder) :
+                    base("WrongCredsPage", "body", parentFolder, 30000, null, false, "d21b4a32-4a9b-4e9f-bc86-9d923ff6bb8d", "")
+            {
+                _popup = new StudyRanorexRepositoryFolders.PopupFolder(this);
+                _mainpage = new StudyRanorexRepositoryFolders.MainPageFolder(this);
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("d21b4a32-4a9b-4e9f-bc86-9d923ff6bb8d")]
+            public virtual Ranorex.BodyTag Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.BodyTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("d21b4a32-4a9b-4e9f-bc86-9d923ff6bb8d")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Popup folder.
+            /// </summary>
+            [RepositoryFolder("b46993ad-c934-4149-8cf6-150ac9cfb3ca")]
+            public virtual StudyRanorexRepositoryFolders.PopupFolder Popup
+            {
+                get { return _popup; }
+            }
+
+            /// <summary>
+            /// The MainPage folder.
+            /// </summary>
+            [RepositoryFolder("df1911a2-cc50-4bef-9f75-c2b02278099d")]
+            public virtual StudyRanorexRepositoryFolders.MainPageFolder MainPage
+            {
+                get { return _mainpage; }
+            }
+        }
+
+        /// <summary>
         /// The PopupFolder folder.
         /// </summary>
         [RepositoryFolder("b46993ad-c934-4149-8cf6-150ac9cfb3ca")]
@@ -363,7 +414,7 @@ namespace StudyRanorex
                     base("Popup", "div", parentFolder, 30000, null, false, "b46993ad-c934-4149-8cf6-150ac9cfb3ca", "")
             {
                 _txtcantloginInfo = new RepoItemInfo(this, "txtCantLogin", "div[@id='loginMainErrorMsgDialog']/div/p[@innertext~'couldn''t\\ log' and @innertext~'account']", 30000, null, "6e3206ca-1d46-4d61-91cf-ba63b0026456");
-                _btnclosepopupInfo = new RepoItemInfo(this, "btnClosePopup", "div/div/button[#'loginMainErrorMsgDialogButton0']", 30000, null, "ad61ebc8-f2b0-4793-bb1c-64347906e709");
+                _btnclosepopupInfo = new RepoItemInfo(this, "btnClosePopup", "div/div/button[#'loginMainErrorMsgDialogButton0']/span", 30000, null, "ad61ebc8-f2b0-4793-bb1c-64347906e709");
             }
 
             /// <summary>
@@ -418,11 +469,11 @@ namespace StudyRanorex
             /// The btnClosePopup item.
             /// </summary>
             [RepositoryItem("ad61ebc8-f2b0-4793-bb1c-64347906e709")]
-            public virtual Ranorex.Button btnClosePopup
+            public virtual Ranorex.SpanTag btnClosePopup
             {
                 get
                 {
-                    return _btnclosepopupInfo.CreateAdapter<Ranorex.Button>(true);
+                    return _btnclosepopupInfo.CreateAdapter<Ranorex.SpanTag>(true);
                 }
             }
 
@@ -440,26 +491,26 @@ namespace StudyRanorex
         }
 
         /// <summary>
-        /// The NewAppAppFolder folder.
+        /// The MainPageFolder folder.
         /// </summary>
-        [RepositoryFolder("b6ba7538-a497-4f07-8609-442335151e4d")]
-        public partial class NewAppAppFolder : RepoGenBaseFolder
+        [RepositoryFolder("df1911a2-cc50-4bef-9f75-c2b02278099d")]
+        public partial class MainPageFolder : RepoGenBaseFolder
         {
-            RepoItemInfo _btnnewInfo;
+            RepoItemInfo _homepagelinkInfo;
 
             /// <summary>
-            /// Creates a new NewApp  folder.
+            /// Creates a new MainPage  folder.
             /// </summary>
-            public NewAppAppFolder(RepoGenBaseFolder parentFolder) :
-                    base("NewApp", "/dom[@domain='www.aa.com']/body/div/div/div", parentFolder, 30000, null, true, "b6ba7538-a497-4f07-8609-442335151e4d", "")
+            public MainPageFolder(RepoGenBaseFolder parentFolder) :
+                    base("MainPage", "header/div", parentFolder, 30000, null, false, "df1911a2-cc50-4bef-9f75-c2b02278099d", "")
             {
-                _btnnewInfo = new RepoItemInfo(this, "btnNew", "button[#'loginMainErrorMsgDialogButton0']/span", 30000, null, "2e2c8ff8-d842-4062-8c0a-c911dbb25d46");
+                _homepagelinkInfo = new RepoItemInfo(this, "HomePageLink", "div[#'main-navigation']/a[@href='https://www.aa.com/homePage.do']/img", 30000, null, "07be59b2-ba39-4b1b-9ab4-3c937497ae5a");
             }
 
             /// <summary>
             /// The Self item.
             /// </summary>
-            [RepositoryItem("b6ba7538-a497-4f07-8609-442335151e4d")]
+            [RepositoryItem("df1911a2-cc50-4bef-9f75-c2b02278099d")]
             public virtual Ranorex.DivTag Self
             {
                 get
@@ -471,7 +522,7 @@ namespace StudyRanorex
             /// <summary>
             /// The Self item info.
             /// </summary>
-            [RepositoryItemInfo("b6ba7538-a497-4f07-8609-442335151e4d")]
+            [RepositoryItemInfo("df1911a2-cc50-4bef-9f75-c2b02278099d")]
             public virtual RepoItemInfo SelfInfo
             {
                 get
@@ -481,26 +532,26 @@ namespace StudyRanorex
             }
 
             /// <summary>
-            /// The btnNew item.
+            /// The HomePageLink item.
             /// </summary>
-            [RepositoryItem("2e2c8ff8-d842-4062-8c0a-c911dbb25d46")]
-            public virtual Ranorex.SpanTag btnNew
+            [RepositoryItem("07be59b2-ba39-4b1b-9ab4-3c937497ae5a")]
+            public virtual Ranorex.ImgTag HomePageLink
             {
                 get
                 {
-                    return _btnnewInfo.CreateAdapter<Ranorex.SpanTag>(true);
+                    return _homepagelinkInfo.CreateAdapter<Ranorex.ImgTag>(true);
                 }
             }
 
             /// <summary>
-            /// The btnNew item info.
+            /// The HomePageLink item info.
             /// </summary>
-            [RepositoryItemInfo("2e2c8ff8-d842-4062-8c0a-c911dbb25d46")]
-            public virtual RepoItemInfo btnNewInfo
+            [RepositoryItemInfo("07be59b2-ba39-4b1b-9ab4-3c937497ae5a")]
+            public virtual RepoItemInfo HomePageLinkInfo
             {
                 get
                 {
-                    return _btnnewInfo;
+                    return _homepagelinkInfo;
                 }
             }
         }
