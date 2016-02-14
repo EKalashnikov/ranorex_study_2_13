@@ -65,6 +65,7 @@ namespace StudyRanorex
             //repo.AmericanAirlines.Popup.txtCantLogin.MoveTo();
             //repo.AmericanAirlines.Popup.btnClosePopup.Click();
             repo.NewApp.btnNew.Click();
+            
             	
             	
         }
