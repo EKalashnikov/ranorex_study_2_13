@@ -44,21 +44,27 @@ namespace StudyRanorex
         void ITestModule.Run()
         {
             Mouse.DefaultMoveTime = 300;
-            Keyboard.DefaultKeyPressTime = 100;
+            Keyboard.DefaultKeyPressTime = 10;
             Delay.SpeedFactor = 1.0;
             
-            Mouse.ScrollWheel(800);
+            Mouse.ScrollWheel(1000);
             
-            repo.AA.HomePage.Reservation.FieldFrom.PressKeys("{END}{SHIFT DOWN}{HOME}{SHIFT UP}{DELETE}FLL");
-            repo.AA.HomePage.Reservation.FieldTo.PressKeys("{END}{SHIFT DOWN}{HOME}{SHIFT UP}{DELETE}JFK");
-            repo.AA.HomePage.Reservation.FieldDepart.PressKeys("{END}{SHIFT DOWN}{HOME}{SHIFT UP}{DELETE}03/01/2016");
-            repo.AA.HomePage.Reservation.FieldReturn.PressKeys("{END}{SHIFT DOWN}{HOME}{SHIFT UP}{DELETE}03/07/2016");
+            String strClr = "{END}{SHIFT DOWN}{HOME}{SHIFT UP}{DELETE}";
+            String strFrom = "FLL";
+            String strTo = "JFK";
+            String strDepart = System.DateTime.Now.AddDays(7).ToString("MM/dd/yyyy");
+            String strReturn = System.DateTime.Now.AddDays(14).ToString("MM/dd/yyyy");
+            
+            repo.AA.HomePage.Reservation.FieldFrom.PressKeys(strClr + strFrom);
+            repo.AA.HomePage.Reservation.FieldTo.PressKeys(strClr + strTo);
+            repo.AA.HomePage.Reservation.FieldDepart.PressKeys(strClr + strDepart);
+            repo.AA.HomePage.Reservation.FieldReturn.PressKeys(strClr + strReturn);
             repo.AA.HomePage.Reservation.bntSearch.Click();
             
             //repo.AA.SearchResults.SearchTimeout.Milliseconds(10000);
-            Delay.Milliseconds(45000);
+            Delay.Milliseconds(40000);
             repo.AA.SearchResults.lnkRefundable.Click();
-            Delay.Milliseconds(15000);
+            Delay.Milliseconds(10000);
             repo.AA.SearchResults.lnkHome.Click();
             
         }
