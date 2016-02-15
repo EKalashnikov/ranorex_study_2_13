@@ -69,18 +69,6 @@
     <Compile Include="Program.cs">
       <id>ce7ea797-97ec-4e24-a150-e28a8ee55ab6</id>
     </Compile>
-    <Compile Include="Recording1.cs">
-      <BoundTo>4c8798d7-8c7e-48e5-9637-8c43c8fca5a2</BoundTo>
-      <DependentUpon>Recording1.rxrec</DependentUpon>
-      <RecorderCode>true</RecorderCode>
-      <id>66d1e4d8-a349-4eca-b839-9a8f01a43569</id>
-    </Compile>
-    <Compile Include="Recording1.UserCode.cs">
-      <BoundTo>4c8798d7-8c7e-48e5-9637-8c43c8fca5a2</BoundTo>
-      <DependentUpon>Recording1.rxrec</DependentUpon>
-      <UserCode>true</UserCode>
-      <id>bf2deead-7985-4b4c-af00-bb6218cfdcef</id>
-    </Compile>
     <Compile Include="StudyRanorexRepository.cs">
       <BoundTo>7c3d1362-96fd-4070-9525-3d62a10f8c4a</BoundTo>
       <DependentUpon>StudyRanorexRepository.rxrep</DependentUpon>
@@ -89,11 +77,6 @@
     </Compile>
     <None Include="app.config">
       <id>d5031c03-7692-4a13-a344-15ae4f6a10d5</id>
-    </None>
-    <None Include="Recording1.rxrec">
-      <BoundTo>7c3d1362-96fd-4070-9525-3d62a10f8c4a</BoundTo>
-      <id>4c8798d7-8c7e-48e5-9637-8c43c8fca5a2</id>
-      <recordtableid>3762c054-672a-45f3-ad40-3494825f34bb</recordtableid>
     </None>
     <None Include="StudyRanorexRepository.rximg">
       <BoundTo>7c3d1362-96fd-4070-9525-3d62a10f8c4a</BoundTo>
