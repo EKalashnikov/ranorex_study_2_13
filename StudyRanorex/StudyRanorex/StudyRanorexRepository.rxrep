@@ -13,7 +13,7 @@ rxversion="5.4.0.24580">
 	isrooted="True"
 	usecache="True">
 		<appfolder
-		name="AmericanAirlines"
+		name="AA"
 		id="70dbb9a2-f881-4f7b-a76f-62f9a618a5e1"
 		searchtimeout="30000ms"
 		capname="webdocument"
@@ -65,8 +65,54 @@ rxversion="5.4.0.24580">
 						/dom[@domain='www.aa.com']/body/section/div/div/div/div/div/div[@class='row']/div/article/form
 					</basepath>
 				</folder>
+				<folder
+				name="Reservation"
+				id="5697e974-9a15-4f45-b25c-25e57f8e4f64"
+				searchtimeout="30000ms"
+				capname="form"
+				isrooted="True"
+				usecache="False">
+					<item
+					name="FieldFrom"
+					id="8162f011-c780-4a5a-b018-7d382f3582d9"
+					searchtimeout="30000ms"
+					capname="inputtag">
+						/dom[@domain='www.aa.com']/body/section/div/div/div/div/div/div/div/div[#'booking-module-tabs']/div/form[#'reservationFlightSearchForm']/div/div/div/label[@innertext~'From']/input
+					</item>
+					<item
+					name="FieldTo"
+					id="02dfd410-2b2a-4b30-b58a-0d20395a860c"
+					searchtimeout="30000ms"
+					capname="inputtag">
+						/dom[@domain='www.aa.com']/body/section/div/div/div/div/div/div/div/div[#'booking-module-tabs']/div/form[#'reservationFlightSearchForm']/div/div/div/label[@innertext~'To']/input
+					</item>
+					<item
+					name="FieldDepart"
+					id="bfe1d4ee-fb01-48c2-880b-6b234a1952c5"
+					searchtimeout="30000ms"
+					capname="inputtag">
+						/dom[@domain='www.aa.com']/body/section/div/div/div/div/div/div/div/div[#'booking-module-tabs']/div/form[#'reservationFlightSearchForm']/div/div/div/label[@innertext~'Depart']/input
+					</item>
+					<item
+					name="FieldReturn"
+					id="b1b677af-bdb4-4c48-896c-2e5da3128005"
+					searchtimeout="30000ms"
+					capname="inputtag">
+						/dom[@domain='www.aa.com']/body/section/div/div/div/div/div/div/div/div[#'booking-module-tabs']/div/form[#'reservationFlightSearchForm']/div/div/div/label[@innertext~'Return']/input
+					</item>
+					<item
+					name="bntSearch"
+					id="f20360d0-5fd1-4e85-93ac-e550b2f237d3"
+					searchtimeout="30000ms"
+					capname="inputtag">
+						/dom[@domain='www.aa.com']/body/section/div/div/div/div/div/div/div/div[#'booking-module-tabs']/div/form[#'reservationFlightSearchForm']/div/div/div/input[@value='Search']
+					</item>
+					<basepath>
+						/dom[@domain='www.aa.com']/body/section/div/div/div/div/div/div/div/div[#'booking-module-tabs']/div/form[#'reservationFlightSearchForm']
+					</basepath>
+				</folder>
 				<basepath>
-					/dom[@domain='www.aa.com']/body/section/div/div/div/div/div/div[@class='row']
+					/dom[@domain='www.aa.com']/body/section/div
 				</basepath>
 			</folder>
 			<folder
@@ -121,6 +167,31 @@ rxversion="5.4.0.24580">
 				</folder>
 				<basepath>
 					/dom[@domain='www.aa.com']/body
+				</basepath>
+			</folder>
+			<folder
+			name="SearchResults"
+			id="58fade16-1285-40fd-9e29-8f40d7b925ef"
+			searchtimeout="30000ms"
+			capname="divtag"
+			isrooted="True"
+			usecache="False">
+				<item
+				name="lnkRefundable"
+				id="9d17e0f6-196b-46f9-aeef-8136c87063ff"
+				searchtimeout="30000ms"
+				capname="atag">
+					/dom[@domain='www.aa.com']/body/div/div/div/div[#'matrix_date_search']/div/div/div/div/ul/li/a[@innertext~'Refundable']
+				</item>
+				<item
+				name="lnkHome"
+				id="d43189e2-16d0-4631-8f69-47b8a45d9f26"
+				searchtimeout="30000ms"
+				capname="imgtag">
+					/dom[@domain='www.aa.com']/body/div/header/div/div[#'main-navigation']/a[@href='https://www.aa.com/homePage.do']/img
+				</item>
+				<basepath>
+					/dom[@domain='www.aa.com']/body/div
 				</basepath>
 			</folder>
 			<basepath>

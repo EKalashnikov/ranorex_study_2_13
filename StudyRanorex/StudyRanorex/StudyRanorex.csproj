@@ -57,7 +57,7 @@
     <Compile Include="AssemblyInfo.cs">
       <id>825acc56-cc87-4860-a324-90039752dde9</id>
     </Compile>
-    <Compile Include="FLL_SVO.cs">
+    <Compile Include="FLL_JFK.cs">
       <id>a6f5bed9-33d6-495c-85e9-c5d84d27a638</id>
     </Compile>
     <Compile Include="LoginModule.cs">

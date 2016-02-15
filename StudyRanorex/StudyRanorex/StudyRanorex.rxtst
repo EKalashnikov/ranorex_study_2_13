@@ -36,7 +36,7 @@ reportlevel="Info;20">
 		name="TicketsSearch"
 		id="a9431c76-ed46-40ff-8372-d28d019f2697">
 			<testmodule
-			name="FLL_SVO"
+			name="FLL_JFK"
 			id="bdc6cfa8-fbfc-466a-a56b-a3a2680fd779"
 			ref="f5226f6d-9f9c-4f63-9b73-5881852d4a42"
 			type="UserCode"/>

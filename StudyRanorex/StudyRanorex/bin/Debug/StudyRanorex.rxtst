@@ -24,12 +24,21 @@ reportlevel="Info;20">
 			type="UserCode"/>
 		</testcase>
 		<testcase
-		name="LoginWrongCredsTest"
+		name="LoginWrongCreds"
 		id="070d55a8-8b1b-44d2-b9e9-c7af295e3e46">
 			<testmodule
 			name="LoginModule"
 			id="2c9c3f3f-58a7-4aae-a0cb-c10e603ee8bd"
 			ref="c3f82d89-8032-43e0-b269-57e0ed096d53"
+			type="UserCode"/>
+		</testcase>
+		<testcase
+		name="TicketsSearch"
+		id="a9431c76-ed46-40ff-8372-d28d019f2697">
+			<testmodule
+			name="FLL_JFK"
+			id="bdc6cfa8-fbfc-466a-a56b-a3a2680fd779"
+			ref="f5226f6d-9f9c-4f63-9b73-5881852d4a42"
 			type="UserCode"/>
 		</testcase>
 	</content>
@@ -43,6 +52,8 @@ reportlevel="Info;20">
 			id="3cdb1cbe-2784-451d-b695-ef465dda7dc0"/>
 			<testcase
 			id="a8ab2674-8ee7-4622-b48b-23d1e20a299c"/>
+			<testcase
+			id="a9431c76-ed46-40ff-8372-d28d019f2697"/>
 		</testconfiguration>
 	</testconfigurations>
 	<references/>

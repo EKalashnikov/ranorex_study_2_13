@@ -27,7 +27,7 @@ namespace StudyRanorex
     public partial class StudyRanorexRepository : RepoGenBaseFolder
     {
         static StudyRanorexRepository instance = new StudyRanorexRepository();
-        StudyRanorexRepositoryFolders.AmericanAirlinesAppFolder _americanairlines;
+        StudyRanorexRepositoryFolders.AAAppFolder _aa;
 
         /// <summary>
         /// Gets the singleton class instance representing the StudyRanorexRepository element repository.
@@ -44,7 +44,7 @@ namespace StudyRanorex
         public StudyRanorexRepository() 
             : base("StudyRanorexRepository", "/", null, 0, false, "5ad22a55-74e6-4bad-aaf6-a920fcbc142f", ".\\RepositoryImages\\StudyRanorexRepository5ad22a55.rximgres")
         {
-            _americanairlines = new StudyRanorexRepositoryFolders.AmericanAirlinesAppFolder(this);
+            _aa = new StudyRanorexRepositoryFolders.AAAppFolder(this);
         }
 
 #region Variables
@@ -64,12 +64,12 @@ namespace StudyRanorex
         }
 
         /// <summary>
-        /// The AmericanAirlines folder.
+        /// The AA folder.
         /// </summary>
         [RepositoryFolder("70dbb9a2-f881-4f7b-a76f-62f9a618a5e1")]
-        public virtual StudyRanorexRepositoryFolders.AmericanAirlinesAppFolder AmericanAirlines
+        public virtual StudyRanorexRepositoryFolders.AAAppFolder AA
         {
-            get { return _americanairlines; }
+            get { return _aa; }
         }
     }
 
@@ -80,22 +80,24 @@ namespace StudyRanorex
     public partial class StudyRanorexRepositoryFolders
     {
         /// <summary>
-        /// The AmericanAirlinesAppFolder folder.
+        /// The AAAppFolder folder.
         /// </summary>
         [RepositoryFolder("70dbb9a2-f881-4f7b-a76f-62f9a618a5e1")]
-        public partial class AmericanAirlinesAppFolder : RepoGenBaseFolder
+        public partial class AAAppFolder : RepoGenBaseFolder
         {
             StudyRanorexRepositoryFolders.HomePageFolder _homepage;
             StudyRanorexRepositoryFolders.WrongCredsPageFolder _wrongcredspage;
+            StudyRanorexRepositoryFolders.SearchResultsFolder _searchresults;
 
             /// <summary>
-            /// Creates a new AmericanAirlines  folder.
+            /// Creates a new AA  folder.
             /// </summary>
-            public AmericanAirlinesAppFolder(RepoGenBaseFolder parentFolder) :
-                    base("AmericanAirlines", "/dom[@domain='www.aa.com']", parentFolder, 30000, null, true, "70dbb9a2-f881-4f7b-a76f-62f9a618a5e1", "")
+            public AAAppFolder(RepoGenBaseFolder parentFolder) :
+                    base("AA", "/dom[@domain='www.aa.com']", parentFolder, 30000, null, true, "70dbb9a2-f881-4f7b-a76f-62f9a618a5e1", "")
             {
                 _homepage = new StudyRanorexRepositoryFolders.HomePageFolder(this);
                 _wrongcredspage = new StudyRanorexRepositoryFolders.WrongCredsPageFolder(this);
+                _searchresults = new StudyRanorexRepositoryFolders.SearchResultsFolder(this);
             }
 
             /// <summary>
@@ -139,6 +141,15 @@ namespace StudyRanorex
             {
                 get { return _wrongcredspage; }
             }
+
+            /// <summary>
+            /// The SearchResults folder.
+            /// </summary>
+            [RepositoryFolder("58fade16-1285-40fd-9e29-8f40d7b925ef")]
+            public virtual StudyRanorexRepositoryFolders.SearchResultsFolder SearchResults
+            {
+                get { return _searchresults; }
+            }
         }
 
         /// <summary>
@@ -148,14 +159,16 @@ namespace StudyRanorex
         public partial class HomePageFolder : RepoGenBaseFolder
         {
             StudyRanorexRepositoryFolders.LoginPanelFolder _loginpanel;
+            StudyRanorexRepositoryFolders.ReservationFolder _reservation;
 
             /// <summary>
             /// Creates a new HomePage  folder.
             /// </summary>
             public HomePageFolder(RepoGenBaseFolder parentFolder) :
-                    base("HomePage", "body/section/div/div/div/div/div/div[@class='row']", parentFolder, 30000, null, false, "4febf9ac-860d-4e4e-a9b3-82284527af20", "")
+                    base("HomePage", "body/section/div", parentFolder, 30000, null, false, "4febf9ac-860d-4e4e-a9b3-82284527af20", "")
             {
                 _loginpanel = new StudyRanorexRepositoryFolders.LoginPanelFolder(this);
+                _reservation = new StudyRanorexRepositoryFolders.ReservationFolder(this);
             }
 
             /// <summary>
@@ -190,6 +203,15 @@ namespace StudyRanorex
             {
                 get { return _loginpanel; }
             }
+
+            /// <summary>
+            /// The Reservation folder.
+            /// </summary>
+            [RepositoryFolder("5697e974-9a15-4f45-b25c-25e57f8e4f64")]
+            public virtual StudyRanorexRepositoryFolders.ReservationFolder Reservation
+            {
+                get { return _reservation; }
+            }
         }
 
         /// <summary>
@@ -207,7 +229,7 @@ namespace StudyRanorex
             /// Creates a new LoginPanel  folder.
             /// </summary>
             public LoginPanelFolder(RepoGenBaseFolder parentFolder) :
-                    base("LoginPanel", "div/article/form", parentFolder, 30000, null, false, "3124d6c8-f2c9-4006-ab81-2614cfd7ae2d", "")
+                    base("LoginPanel", "div/div/div/div/div[@class='row']/div/article/form", parentFolder, 30000, null, false, "3124d6c8-f2c9-4006-ab81-2614cfd7ae2d", "")
             {
                 _fieldusernameInfo = new RepoItemInfo(this, "FieldUserName", "label[@innertext~'AAdvantage']/input", 30000, null, "6d848daa-ce5e-4e2d-83f7-69474e00890c");
                 _fieldlastnameInfo = new RepoItemInfo(this, "FieldLastName", "label[@innertext~'Last name']/input", 30000, null, "9819f9e0-8b5d-4f5f-853c-56f9a1c57f9a");
@@ -332,6 +354,176 @@ namespace StudyRanorex
                 get
                 {
                     return _btnloginInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The ReservationFolder folder.
+        /// </summary>
+        [RepositoryFolder("5697e974-9a15-4f45-b25c-25e57f8e4f64")]
+        public partial class ReservationFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _fieldfromInfo;
+            RepoItemInfo _fieldtoInfo;
+            RepoItemInfo _fielddepartInfo;
+            RepoItemInfo _fieldreturnInfo;
+            RepoItemInfo _bntsearchInfo;
+
+            /// <summary>
+            /// Creates a new Reservation  folder.
+            /// </summary>
+            public ReservationFolder(RepoGenBaseFolder parentFolder) :
+                    base("Reservation", "div/div/div/div/div/div/div[#'booking-module-tabs']/div/form[#'reservationFlightSearchForm']", parentFolder, 30000, null, false, "5697e974-9a15-4f45-b25c-25e57f8e4f64", "")
+            {
+                _fieldfromInfo = new RepoItemInfo(this, "FieldFrom", "div/div/div/label[@innertext~'From']/input", 30000, null, "8162f011-c780-4a5a-b018-7d382f3582d9");
+                _fieldtoInfo = new RepoItemInfo(this, "FieldTo", "div/div/div/label[@innertext~'To']/input", 30000, null, "02dfd410-2b2a-4b30-b58a-0d20395a860c");
+                _fielddepartInfo = new RepoItemInfo(this, "FieldDepart", "div/div/div/label[@innertext~'Depart']/input", 30000, null, "bfe1d4ee-fb01-48c2-880b-6b234a1952c5");
+                _fieldreturnInfo = new RepoItemInfo(this, "FieldReturn", "div/div/div/label[@innertext~'Return']/input", 30000, null, "b1b677af-bdb4-4c48-896c-2e5da3128005");
+                _bntsearchInfo = new RepoItemInfo(this, "bntSearch", "div/div/div/input[@value='Search']", 30000, null, "f20360d0-5fd1-4e85-93ac-e550b2f237d3");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("5697e974-9a15-4f45-b25c-25e57f8e4f64")]
+            public virtual Ranorex.Form Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.Form>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("5697e974-9a15-4f45-b25c-25e57f8e4f64")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The FieldFrom item.
+            /// </summary>
+            [RepositoryItem("8162f011-c780-4a5a-b018-7d382f3582d9")]
+            public virtual Ranorex.InputTag FieldFrom
+            {
+                get
+                {
+                    return _fieldfromInfo.CreateAdapter<Ranorex.InputTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The FieldFrom item info.
+            /// </summary>
+            [RepositoryItemInfo("8162f011-c780-4a5a-b018-7d382f3582d9")]
+            public virtual RepoItemInfo FieldFromInfo
+            {
+                get
+                {
+                    return _fieldfromInfo;
+                }
+            }
+
+            /// <summary>
+            /// The FieldTo item.
+            /// </summary>
+            [RepositoryItem("02dfd410-2b2a-4b30-b58a-0d20395a860c")]
+            public virtual Ranorex.InputTag FieldTo
+            {
+                get
+                {
+                    return _fieldtoInfo.CreateAdapter<Ranorex.InputTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The FieldTo item info.
+            /// </summary>
+            [RepositoryItemInfo("02dfd410-2b2a-4b30-b58a-0d20395a860c")]
+            public virtual RepoItemInfo FieldToInfo
+            {
+                get
+                {
+                    return _fieldtoInfo;
+                }
+            }
+
+            /// <summary>
+            /// The FieldDepart item.
+            /// </summary>
+            [RepositoryItem("bfe1d4ee-fb01-48c2-880b-6b234a1952c5")]
+            public virtual Ranorex.InputTag FieldDepart
+            {
+                get
+                {
+                    return _fielddepartInfo.CreateAdapter<Ranorex.InputTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The FieldDepart item info.
+            /// </summary>
+            [RepositoryItemInfo("bfe1d4ee-fb01-48c2-880b-6b234a1952c5")]
+            public virtual RepoItemInfo FieldDepartInfo
+            {
+                get
+                {
+                    return _fielddepartInfo;
+                }
+            }
+
+            /// <summary>
+            /// The FieldReturn item.
+            /// </summary>
+            [RepositoryItem("b1b677af-bdb4-4c48-896c-2e5da3128005")]
+            public virtual Ranorex.InputTag FieldReturn
+            {
+                get
+                {
+                    return _fieldreturnInfo.CreateAdapter<Ranorex.InputTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The FieldReturn item info.
+            /// </summary>
+            [RepositoryItemInfo("b1b677af-bdb4-4c48-896c-2e5da3128005")]
+            public virtual RepoItemInfo FieldReturnInfo
+            {
+                get
+                {
+                    return _fieldreturnInfo;
+                }
+            }
+
+            /// <summary>
+            /// The bntSearch item.
+            /// </summary>
+            [RepositoryItem("f20360d0-5fd1-4e85-93ac-e550b2f237d3")]
+            public virtual Ranorex.InputTag bntSearch
+            {
+                get
+                {
+                    return _bntsearchInfo.CreateAdapter<Ranorex.InputTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The bntSearch item info.
+            /// </summary>
+            [RepositoryItemInfo("f20360d0-5fd1-4e85-93ac-e550b2f237d3")]
+            public virtual RepoItemInfo bntSearchInfo
+            {
+                get
+                {
+                    return _bntsearchInfo;
                 }
             }
         }
@@ -552,6 +744,98 @@ namespace StudyRanorex
                 get
                 {
                     return _homepagelinkInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The SearchResultsFolder folder.
+        /// </summary>
+        [RepositoryFolder("58fade16-1285-40fd-9e29-8f40d7b925ef")]
+        public partial class SearchResultsFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _lnkrefundableInfo;
+            RepoItemInfo _lnkhomeInfo;
+
+            /// <summary>
+            /// Creates a new SearchResults  folder.
+            /// </summary>
+            public SearchResultsFolder(RepoGenBaseFolder parentFolder) :
+                    base("SearchResults", "body/div", parentFolder, 30000, null, false, "58fade16-1285-40fd-9e29-8f40d7b925ef", "")
+            {
+                _lnkrefundableInfo = new RepoItemInfo(this, "lnkRefundable", "div/div/div[#'matrix_date_search']/div/div/div/div/ul/li/a[@innertext~'Refundable']", 30000, null, "9d17e0f6-196b-46f9-aeef-8136c87063ff");
+                _lnkhomeInfo = new RepoItemInfo(this, "lnkHome", "header/div/div[#'main-navigation']/a[@href='https://www.aa.com/homePage.do']/img", 30000, null, "d43189e2-16d0-4631-8f69-47b8a45d9f26");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("58fade16-1285-40fd-9e29-8f40d7b925ef")]
+            public virtual Ranorex.DivTag Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.DivTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("58fade16-1285-40fd-9e29-8f40d7b925ef")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The lnkRefundable item.
+            /// </summary>
+            [RepositoryItem("9d17e0f6-196b-46f9-aeef-8136c87063ff")]
+            public virtual Ranorex.ATag lnkRefundable
+            {
+                get
+                {
+                    return _lnkrefundableInfo.CreateAdapter<Ranorex.ATag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The lnkRefundable item info.
+            /// </summary>
+            [RepositoryItemInfo("9d17e0f6-196b-46f9-aeef-8136c87063ff")]
+            public virtual RepoItemInfo lnkRefundableInfo
+            {
+                get
+                {
+                    return _lnkrefundableInfo;
+                }
+            }
+
+            /// <summary>
+            /// The lnkHome item.
+            /// </summary>
+            [RepositoryItem("d43189e2-16d0-4631-8f69-47b8a45d9f26")]
+            public virtual Ranorex.ImgTag lnkHome
+            {
+                get
+                {
+                    return _lnkhomeInfo.CreateAdapter<Ranorex.ImgTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The lnkHome item info.
+            /// </summary>
+            [RepositoryItemInfo("d43189e2-16d0-4631-8f69-47b8a45d9f26")]
+            public virtual RepoItemInfo lnkHomeInfo
+            {
+                get
+                {
+                    return _lnkhomeInfo;
                 }
             }
         }
