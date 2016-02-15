@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<report>
+	<activity
+		result="Failed"
+		duration="0ms"
+		durationms="0"
+		type="root"
+		rid="22528ce2b20fed78"
+		totalerrorcount="1"
+		totalwarningcount="1"
+		totalsuccesscount="0"
+		totalfailedcount="0"
+		totalblockedcount="0"
+		user="automation"
+		host="DESKTOP-IP0304R"
+		rxversion="5.4.0.24580"
+		osversion="Windows 10 64bit"
+		runtimeversion="4.0.30319.42000"
+		procarch="32bit"
+		language="en-US"
+		screenresolution="1024x768"
+		timestamp="2/14/2016 11:02:04 PM"
+		timestampiso="2016-02-15T04:02:04"
+		timeoutfactor="1"
+		module="FLL_JFK">
+		<detail>
+			FLL_JFK
+		</detail>
+		<errmsg>
+			The element does not support the required capability 'webdocument'.
+		</errmsg>
+		<varbindings/>
+		<item
+			timeRelativeToTestSuiteStartTime="00:01.452"
+			timeRelativeToTestModuleStartTime="00:01.452"
+			timeWallClock="23:02:06"
+			time="00:01.452"
+			level="Warn"
+			category="Firefox"
+			errimg=".\FLL_JFK.cs_20160214_230159_12a07699_trace.jpg"
+			errthumb=".\FLL_JFK.cs_20160214_230159_12a07699_trace_thumb.jpg">
+			<message>
+				Please make sure that you have the Ranorex Addon installed and enabled in your Mozilla Firefox browser. Otherwise Ranorex UI element identification capabilities for Firefox are limited.<br/>The following website provides more information on this technology limitation:<br/>http://www.ranorex.com/support/user-guide-20/instrumentation-wizard/mozilla-firefox.html<br/>(This message is only shown once per report.)
+			</message>
+			<metainfo
+				codefile="c:\Users\automation\Documents\ranorex_study_2_13\StudyRanorex\StudyRanorex\FLL_JFK.cs"
+				codeline="58"
+				loglvl="Warn"/>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:53.172"
+			timeRelativeToTestModuleStartTime="00:53.172"
+			timeWallClock="23:02:57"
+			time="00:53.172"
+			level="Success"
+			category="Validation"
+			errimg=".\FLL_JFK.cs_20160214_230159_1beaf036_trace.jpg"
+			errthumb=".\FLL_JFK.cs_20160214_230159_1beaf036_trace_thumb.jpg">
+			<message>
+				Element for item 'tabRefundable' does exist.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/dom[@domain='www.aa.com' and @caption~'Flight results']/body/div/div/div/div[#'matrix_date_search']/div/div/div/div[#'aa-matrix-departure-flights']/div/form[#'matrixRefundableFlightSearchDepartureForm']"
+				fullname="StudyRanorexRepository.AAResults.Results.tabs.tabRefundable"
+				id="775ee7ba882f4dd687fb52d01ffdaa71"
+				timeout="120000"
+				codefile="c:\Users\automation\Documents\ranorex_study_2_13\StudyRanorex\StudyRanorex\FLL_JFK.cs"
+				codeline="76"
+				loglvl="Success"/>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:53.765"
+			timeRelativeToTestModuleStartTime="00:53.765"
+			timeWallClock="23:02:58"
+			time="00:53.765"
+			level="Error"
+			category="Module"
+			errimg=".\FLL_JFK.cs_20160214_230159_f2b7bc08_trace.jpg"
+			errthumb=".\FLL_JFK.cs_20160214_230159_f2b7bc08_trace_thumb.jpg">
+			<message>
+				The element does not support the required capability 'webdocument'.
+			</message>
+			<metainfo
+				stacktrace="   at Ranorex.Adapter..ctor(Element element)
+   at Ranorex.WebDocument.op_Implicit(String path)
+   at StudyRanorex.FLL_JFK.Ranorex.Core.Testing.ITestModule.Run() in c:\Users\automation\Documents\ranorex_study_2_13\StudyRanorex\StudyRanorex\FLL_JFK.cs:line 78
+   at Ranorex.Core.Testing.TestSuiteModule.RunInternal(DataContext parentDataContext)"
+				codefile="c:\Users\automation\Documents\ranorex_study_2_13\StudyRanorex\StudyRanorex\FLL_JFK.cs"
+				codeline="78"
+				loglvl="Error"/>
+		</item>
+	</activity>
+</report>

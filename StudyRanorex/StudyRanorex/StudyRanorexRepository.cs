@@ -28,6 +28,7 @@ namespace StudyRanorex
     {
         static StudyRanorexRepository instance = new StudyRanorexRepository();
         StudyRanorexRepositoryFolders.AAAppFolder _aa;
+        StudyRanorexRepositoryFolders.AAResultsAppFolder _aaresults;
 
         /// <summary>
         /// Gets the singleton class instance representing the StudyRanorexRepository element repository.
@@ -45,6 +46,7 @@ namespace StudyRanorex
             : base("StudyRanorexRepository", "/", null, 0, false, "5ad22a55-74e6-4bad-aaf6-a920fcbc142f", ".\\RepositoryImages\\StudyRanorexRepository5ad22a55.rximgres")
         {
             _aa = new StudyRanorexRepositoryFolders.AAAppFolder(this);
+            _aaresults = new StudyRanorexRepositoryFolders.AAResultsAppFolder(this);
         }
 
 #region Variables
@@ -70,6 +72,15 @@ namespace StudyRanorex
         public virtual StudyRanorexRepositoryFolders.AAAppFolder AA
         {
             get { return _aa; }
+        }
+
+        /// <summary>
+        /// The AAResults folder.
+        /// </summary>
+        [RepositoryFolder("c4c2049e-5a6c-4031-b32b-79a02f941de5")]
+        public virtual StudyRanorexRepositoryFolders.AAResultsAppFolder AAResults
+        {
+            get { return _aaresults; }
         }
     }
 
@@ -836,6 +847,174 @@ namespace StudyRanorex
                 get
                 {
                     return _lnkhomeInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The AAResultsAppFolder folder.
+        /// </summary>
+        [RepositoryFolder("c4c2049e-5a6c-4031-b32b-79a02f941de5")]
+        public partial class AAResultsAppFolder : RepoGenBaseFolder
+        {
+            StudyRanorexRepositoryFolders.ResultsFolder _results;
+
+            /// <summary>
+            /// Creates a new AAResults  folder.
+            /// </summary>
+            public AAResultsAppFolder(RepoGenBaseFolder parentFolder) :
+                    base("AAResults", "/dom[@domain='www.aa.com' and @caption~'Flight results']", parentFolder, 30000, null, true, "c4c2049e-5a6c-4031-b32b-79a02f941de5", "")
+            {
+                _results = new StudyRanorexRepositoryFolders.ResultsFolder(this);
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("c4c2049e-5a6c-4031-b32b-79a02f941de5")]
+            public virtual Ranorex.WebDocument Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.WebDocument>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("c4c2049e-5a6c-4031-b32b-79a02f941de5")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Results folder.
+            /// </summary>
+            [RepositoryFolder("70ae3bcd-6981-468b-9393-2d930c053a63")]
+            public virtual StudyRanorexRepositoryFolders.ResultsFolder Results
+            {
+                get { return _results; }
+            }
+        }
+
+        /// <summary>
+        /// The ResultsFolder folder.
+        /// </summary>
+        [RepositoryFolder("70ae3bcd-6981-468b-9393-2d930c053a63")]
+        public partial class ResultsFolder : RepoGenBaseFolder
+        {
+            StudyRanorexRepositoryFolders.TabsFolder _tabs;
+
+            /// <summary>
+            /// Creates a new Results  folder.
+            /// </summary>
+            public ResultsFolder(RepoGenBaseFolder parentFolder) :
+                    base("Results", "body/div/div/div/div[#'matrix_date_search']", parentFolder, 30000, null, false, "70ae3bcd-6981-468b-9393-2d930c053a63", "")
+            {
+                _tabs = new StudyRanorexRepositoryFolders.TabsFolder(this);
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("70ae3bcd-6981-468b-9393-2d930c053a63")]
+            public virtual Ranorex.DivTag Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.DivTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("70ae3bcd-6981-468b-9393-2d930c053a63")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The tabs folder.
+            /// </summary>
+            [RepositoryFolder("92197d3a-fb26-42ad-baca-9f75b94fc456")]
+            public virtual StudyRanorexRepositoryFolders.TabsFolder tabs
+            {
+                get { return _tabs; }
+            }
+        }
+
+        /// <summary>
+        /// The TabsFolder folder.
+        /// </summary>
+        [RepositoryFolder("92197d3a-fb26-42ad-baca-9f75b94fc456")]
+        public partial class TabsFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _tabrefundableInfo;
+
+            /// <summary>
+            /// Creates a new tabs  folder.
+            /// </summary>
+            public TabsFolder(RepoGenBaseFolder parentFolder) :
+                    base("tabs", "div/div/div/div[#'aa-matrix-departure-flights']", parentFolder, 30000, null, false, "92197d3a-fb26-42ad-baca-9f75b94fc456", "")
+            {
+                _tabrefundableInfo = new RepoItemInfo(this, "tabRefundable", "div/form[#'matrixRefundableFlightSearchDepartureForm']", 30000, null, "775ee7ba-882f-4dd6-87fb-52d01ffdaa71");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("92197d3a-fb26-42ad-baca-9f75b94fc456")]
+            public virtual Ranorex.DivTag Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.DivTag>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("92197d3a-fb26-42ad-baca-9f75b94fc456")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The tabRefundable item.
+            /// </summary>
+            [RepositoryItem("775ee7ba-882f-4dd6-87fb-52d01ffdaa71")]
+            public virtual Ranorex.Form tabRefundable
+            {
+                get
+                {
+                    return _tabrefundableInfo.CreateAdapter<Ranorex.Form>(true);
+                }
+            }
+
+            /// <summary>
+            /// The tabRefundable item info.
+            /// </summary>
+            [RepositoryItemInfo("775ee7ba-882f-4dd6-87fb-52d01ffdaa71")]
+            public virtual RepoItemInfo tabRefundableInfo
+            {
+                get
+                {
+                    return _tabrefundableInfo;
                 }
             }
         }

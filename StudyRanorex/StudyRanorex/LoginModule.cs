@@ -47,7 +47,7 @@ namespace StudyRanorex
             Keyboard.DefaultKeyPressTime = 100;
             Delay.SpeedFactor = 1.0;
             
-            Mouse.ScrollWheel(500);
+            Mouse.ScrollWheel(1000);
             
             
             repo.AA.HomePage.LoginPanel.FieldUserName.Click();

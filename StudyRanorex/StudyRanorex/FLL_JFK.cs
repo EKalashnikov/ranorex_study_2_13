@@ -61,10 +61,17 @@ namespace StudyRanorex
             repo.AA.HomePage.Reservation.FieldReturn.PressKeys(strClr + strReturn);
             repo.AA.HomePage.Reservation.bntSearch.Click();
             
-            //repo.AA.SearchResults.SearchTimeout.Milliseconds(10000);
-            Delay.Milliseconds(40000);
+            //Delay.Milliseconds(45000);   
+            WebDocument docWaiting = "/dom[@caption~'We are processing your request']";
+            docWaiting.WaitForDocumentLoaded(60000);            
+            WebDocument docResultList = "/dom[@caption~'Flight results']";
+            docResultList.WaitForDocumentLoaded(60000);
+                        
             repo.AA.SearchResults.lnkRefundable.Click();
-            Delay.Milliseconds(10000);
+            
+            //Delay.Milliseconds(10000);
+            Validate.Exists(repo.AAResults.Results.tabs.tabRefundableInfo, "Check Object '{0}'",false);
+            
             repo.AA.SearchResults.lnkHome.Click();
             
         }

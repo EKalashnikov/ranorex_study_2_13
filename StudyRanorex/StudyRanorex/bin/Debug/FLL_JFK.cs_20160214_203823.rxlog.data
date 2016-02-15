@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<report>
+	<activity
+		result="Failed"
+		duration="0ms"
+		durationms="0"
+		type="root"
+		rid="2b940701e78e74c"
+		totalerrorcount="1"
+		totalwarningcount="0"
+		totalsuccesscount="0"
+		totalfailedcount="0"
+		totalblockedcount="0"
+		user="automation"
+		host="DESKTOP-IP0304R"
+		rxversion="5.4.0.24580"
+		osversion="Windows 10 64bit"
+		runtimeversion="4.0.30319.42000"
+		procarch="32bit"
+		language="en-US"
+		screenresolution="1024x768"
+		timestamp="2/14/2016 8:38:30 PM"
+		timestampiso="2016-02-15T01:38:30"
+		timeoutfactor="1"
+		module="FLL_JFK">
+		<detail>
+			FLL_JFK
+		</detail>
+		<errmsg>
+			No element found for path '/dom[@caption~'Flight results']' within 10s.
+		</errmsg>
+		<varbindings/>
+		<item
+			timeRelativeToTestSuiteStartTime="00:18.937"
+			timeRelativeToTestModuleStartTime="00:18.937"
+			timeWallClock="20:38:49"
+			time="00:18.937"
+			level="Error"
+			category="Module"
+			errimg=".\FLL_JFK.cs_20160214_203823_34ac13a2_trace.jpg"
+			errthumb=".\FLL_JFK.cs_20160214_203823_34ac13a2_trace_thumb.jpg">
+			<message>
+				No element found for path '/dom[@caption~'Flight results']' within 10s.
+			</message>
+			<metainfo
+				stacktrace="   at Ranorex.Core.Element.FindSingle(RxPath path, Duration timeout)
+   at Ranorex.Core.Element.FromPath(String path)
+   at Ranorex.WebDocument.op_Implicit(String path)
+   at StudyRanorex.FLL_JFK.Ranorex.Core.Testing.ITestModule.Run() in c:\Users\automation\Documents\ranorex_study_2_13\StudyRanorex\StudyRanorex\FLL_JFK.cs:line 67
+   at Ranorex.Core.Testing.TestSuiteModule.RunInternal(DataContext parentDataContext)"
+				codefile="c:\Users\automation\Documents\ranorex_study_2_13\StudyRanorex\StudyRanorex\FLL_JFK.cs"
+				codeline="67"
+				loglvl="Error"/>
+		</item>
+	</activity>
+</report>

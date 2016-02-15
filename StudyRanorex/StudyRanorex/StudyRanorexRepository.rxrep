@@ -198,6 +198,46 @@ rxversion="5.4.0.24580">
 				/dom[@domain='www.aa.com']
 			</basepath>
 		</appfolder>
+		<appfolder
+		name="AAResults"
+		id="c4c2049e-5a6c-4031-b32b-79a02f941de5"
+		searchtimeout="30000ms"
+		capname="webdocument"
+		isrooted="True"
+		usecache="True">
+			<folder
+			name="Results"
+			id="70ae3bcd-6981-468b-9393-2d930c053a63"
+			searchtimeout="30000ms"
+			capname="divtag"
+			isrooted="True"
+			usecache="False">
+				<folder
+				name="tabs"
+				id="92197d3a-fb26-42ad-baca-9f75b94fc456"
+				searchtimeout="30000ms"
+				capname="divtag"
+				isrooted="True"
+				usecache="False">
+					<item
+					name="tabRefundable"
+					id="775ee7ba-882f-4dd6-87fb-52d01ffdaa71"
+					searchtimeout="30000ms"
+					capname="form">
+						/dom[@domain='www.aa.com' and @caption~'Flight results']/body/div/div/div/div[#'matrix_date_search']/div/div/div/div[#'aa-matrix-departure-flights']/div/form[#'matrixRefundableFlightSearchDepartureForm']
+					</item>
+					<basepath>
+						/dom[@domain='www.aa.com' and @caption~'Flight results']/body/div/div/div/div[#'matrix_date_search']/div/div/div/div[#'aa-matrix-departure-flights']
+					</basepath>
+				</folder>
+				<basepath>
+					/dom[@domain='www.aa.com' and @caption~'Flight results']/body/div/div/div/div[#'matrix_date_search']
+				</basepath>
+			</folder>
+			<basepath>
+				/dom[@domain='www.aa.com' and @caption~'Flight results']
+			</basepath>
+		</appfolder>
 		<basepath/>
 	</rootfolder>
 	<variables/>

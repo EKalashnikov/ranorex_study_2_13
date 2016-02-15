@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<report>
+	<activity
+		result="Success"
+		duration="0ms"
+		durationms="0"
+		type="root"
+		rid="1f36046f09a271d8"
+		totalerrorcount="0"
+		totalwarningcount="1"
+		totalsuccesscount="0"
+		totalfailedcount="0"
+		totalblockedcount="0"
+		user="automation"
+		host="DESKTOP-IP0304R"
+		rxversion="5.4.0.24580"
+		osversion="Windows 10 64bit"
+		runtimeversion="4.0.30319.42000"
+		procarch="32bit"
+		language="en-US"
+		screenresolution="1024x768"
+		timestamp="2/14/2016 11:25:27 PM"
+		timestampiso="2016-02-15T04:25:27"
+		timeoutfactor="1"
+		module="FLL_JFK">
+		<detail>
+			FLL_JFK
+		</detail>
+		<varbindings/>
+		<item
+			timeRelativeToTestSuiteStartTime="00:02.140"
+			timeRelativeToTestModuleStartTime="00:02.140"
+			timeWallClock="23:25:29"
+			time="00:02.140"
+			level="Warn"
+			category="Firefox">
+			<message>
+				Please make sure that you have the Ranorex Addon installed and enabled in your Mozilla Firefox browser. Otherwise Ranorex UI element identification capabilities for Firefox are limited.<br/>The following website provides more information on this technology limitation:<br/>http://www.ranorex.com/support/user-guide-20/instrumentation-wizard/mozilla-firefox.html<br/>(This message is only shown once per report.)
+			</message>
+			<metainfo
+				codefile="c:\Users\automation\Documents\ranorex_study_2_13\StudyRanorex\StudyRanorex\FLL_JFK.cs"
+				codeline="58"
+				loglvl="Warn"/>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:43.155"
+			timeRelativeToTestModuleStartTime="00:43.155"
+			timeWallClock="23:26:10"
+			time="00:43.155"
+			level="Success"
+			category="Validation">
+			<message>
+				Check Object 'tabRefundable'
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/dom[@domain='www.aa.com' and @caption~'Flight results']/body/div/div/div/div[#'matrix_date_search']/div/div/div/div[#'aa-matrix-departure-flights']/div/form[#'matrixRefundableFlightSearchDepartureForm']"
+				fullname="StudyRanorexRepository.AAResults.Results.tabs.tabRefundable"
+				id="775ee7ba882f4dd687fb52d01ffdaa71"
+				timeout="120000"
+				codefile="c:\Users\automation\Documents\ranorex_study_2_13\StudyRanorex\StudyRanorex\FLL_JFK.cs"
+				codeline="73"
+				loglvl="Success"/>
+		</item>
+	</activity>
+</report>
