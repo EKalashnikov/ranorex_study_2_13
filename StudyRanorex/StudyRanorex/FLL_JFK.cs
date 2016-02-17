@@ -21,7 +21,7 @@ using Ranorex.Core.Testing;
 namespace StudyRanorex
 {
     /// <summary>
-    /// Description of FLL_SVO.
+    /// Description of FLL_JFK.
     /// </summary>
     [TestModule("F5226F6D-9F9C-4F63-9B73-5881852D4A42", ModuleType.UserCode, 1)]
     public class FLL_JFK : ITestModule
@@ -43,36 +43,46 @@ namespace StudyRanorex
         /// that will in turn invoke this method.</remarks>
         void ITestModule.Run()
         {
-            Mouse.DefaultMoveTime = 300;
+            Mouse.DefaultMoveTime = 30;
             Keyboard.DefaultKeyPressTime = 10;
             Delay.SpeedFactor = 1.0;
             
             Mouse.ScrollWheel(1000);
             
+            //setting sequence to clear field
             String strClr = "{END}{SHIFT DOWN}{HOME}{SHIFT UP}{DELETE}";
+            
+            //setting search parametrs
             String strFrom = "FLL";
             String strTo = "JFK";
             String strDepart = System.DateTime.Now.AddDays(7).ToString("MM/dd/yyyy");
             String strReturn = System.DateTime.Now.AddDays(14).ToString("MM/dd/yyyy");
             
-            repo.AA.HomePage.Reservation.FieldFrom.PressKeys(strClr + strFrom);
-            repo.AA.HomePage.Reservation.FieldTo.PressKeys(strClr + strTo);
-            repo.AA.HomePage.Reservation.FieldDepart.PressKeys(strClr + strDepart);
-            repo.AA.HomePage.Reservation.FieldReturn.PressKeys(strClr + strReturn);
+            //entering the search parametrs and searching
+            repo.AA.HomePage.Reservation.fldFrom.PressKeys(strClr + strFrom);
+            repo.AA.HomePage.Reservation.fldTo.PressKeys(strClr + strTo);
+            repo.AA.HomePage.Reservation.fldDepart.PressKeys(strClr + strDepart);
+            repo.AA.HomePage.Reservation.fldReturn.PressKeys(strClr + strReturn);
             repo.AA.HomePage.Reservation.bntSearch.Click();
             
-            //Delay.Milliseconds(45000);   
-            WebDocument docWaiting = "/dom[@caption~'We are processing your request']";
-            docWaiting.WaitForDocumentLoaded(60000);            
-            WebDocument docResultList = "/dom[@caption~'Flight results']";
-            docResultList.WaitForDocumentLoaded(60000);
+            //Waiting for Fligth result to loaded within next 60 secs
+            repo.AADocuments.Results.WaitForDocumentLoaded(6000);
                         
+            //not ready - working with select, setting option
+            //repo.AA.SearchResults.tabs.slctSort.SelectBox.FindSingle.SetAttributeValue(
+            
+            //browsing tabs with waiting them to be fully loaded
             repo.AA.SearchResults.lnkRefundable.Click();
+            Validate.Exists(repo.AA.SearchResults.tabs.tabRefundableInfo);
             
-            //Delay.Milliseconds(10000);
-            Validate.Exists(repo.AAResults.Results.tabs.tabRefundableInfo, "Check Object '{0}'",false);
+            repo.AA.SearchResults.lnkBusiness.Click();
+            Validate.Exists(repo.AA.SearchResults.tabs.tabBusinessInfo);
             
-            repo.AA.SearchResults.lnkHome.Click();
+            repo.AA.SearchResults.lnkLowestFare.Click();
+            Validate.Exists(repo.AA.SearchResults.lnkLowestFareInfo);
+            
+            //going to home page
+            repo.AA.MainMenu.lnkHome.Click();
             
         }
     }

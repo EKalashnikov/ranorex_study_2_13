@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<report>
+	<activity
+		result="Failed"
+		duration="0ms"
+		durationms="0"
+		type="root"
+		rid="134d01145f65d119"
+		totalerrorcount="1"
+		totalwarningcount="0"
+		totalsuccesscount="0"
+		totalfailedcount="0"
+		totalblockedcount="0"
+		user="automation"
+		host="DESKTOP-IP0304R"
+		rxversion="5.4.0.24580"
+		osversion="Windows 10 64bit"
+		runtimeversion="4.0.30319.42000"
+		procarch="32bit"
+		language="en-US"
+		screenresolution="1024x768"
+		timestamp="2/16/2016 8:43:26 PM"
+		timestampiso="2016-02-17T01:43:26"
+		timeoutfactor="1"
+		module="LoginModule">
+		<detail>
+			LoginModule
+		</detail>
+		<varbindings/>
+		<item
+			timeRelativeToTestSuiteStartTime="00:38.547"
+			timeRelativeToTestModuleStartTime="00:38.547"
+			timeWallClock="20:44:05"
+			time="00:38.547"
+			level="Success"
+			category="Validation">
+			<message>
+				Element for item 'txtCantLogin' does exist.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/dom[@domain='www.aa.com']/body/div/div[@id='loginMainErrorMsgDialog']/div/p[@innertext~'couldn''t\ log' and @innertext~'account']"
+				fullname="StudyRanorexRepository.AA.WrongCredsPage.Popup.txtCantLogin"
+				id="6e3206ca1d464d6191cfba63b0026456"
+				timeout="120000"
+				codefile="c:\Users\automation\Documents\ranorex_study_2_13\StudyRanorex\StudyRanorex\LoginModule.cs"
+				codeline="63"
+				loglvl="Success"/>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="00:56.421"
+			timeRelativeToTestModuleStartTime="00:56.421"
+			timeWallClock="20:44:23"
+			time="00:56.421"
+			level="Error"
+			category="Module">
+			<message>
+				Test run was aborted by the user.
+			</message>
+			<metainfo
+				loglvl="Error"/>
+		</item>
+	</activity>
+</report>

@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<report>
+	<activity
+		result="Success"
+		duration="0ms"
+		durationms="0"
+		type="root"
+		rid="1e5cd2e35240ccc"
+		totalerrorcount="0"
+		totalwarningcount="0"
+		totalsuccesscount="0"
+		totalfailedcount="0"
+		totalblockedcount="0"
+		user="automation"
+		host="DESKTOP-IP0304R"
+		rxversion="5.4.0.24580"
+		osversion="Windows 10 64bit"
+		runtimeversion="4.0.30319.42000"
+		procarch="32bit"
+		language="en-US"
+		screenresolution="1024x768"
+		timestamp="2/16/2016 9:10:17 PM"
+		timestampiso="2016-02-17T02:10:17"
+		timeoutfactor="1"
+		module="FLL_JFK">
+		<detail>
+			FLL_JFK
+		</detail>
+		<varbindings/>
+		<item
+			timeRelativeToTestSuiteStartTime="00:55.653"
+			timeRelativeToTestModuleStartTime="00:55.654"
+			timeWallClock="21:11:13"
+			time="00:55.653"
+			level="Success"
+			category="Validation">
+			<message>
+				Element for item 'tabRefundable' does exist.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/dom[@domain='www.aa.com']/body/div/div/div/div[#'matrix_date_search']/div/div/div/div[#'aa-matrix-departure-flights']/div/form[#'matrixRefundableFlightSearchDepartureForm']"
+				fullname="StudyRanorexRepository.AA.SearchResults.tabs.tabRefundable"
+				id="775ee7ba882f4dd687fb52d01ffdaa71"
+				timeout="120000"
+				codefile="c:\Users\automation\Documents\ranorex_study_2_13\StudyRanorex\StudyRanorex\FLL_JFK.cs"
+				codeline="67"
+				loglvl="Success"/>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="01:00.216"
+			timeRelativeToTestModuleStartTime="01:00.217"
+			timeWallClock="21:11:18"
+			time="01:00.216"
+			level="Success"
+			category="Validation">
+			<message>
+				Element for item 'tabBusiness' does exist.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/dom[@domain='www.aa.com']/body/div/div/div/div[#'matrix_date_search']/div/div/div/div[#'aa-matrix-departure-flights']/div/form[#'matrixPremiumFlightSearchDepartureForm']"
+				fullname="StudyRanorexRepository.AA.SearchResults.tabs.tabBusiness"
+				id="f762e036d7444e57962ee91d20cbdbd7"
+				timeout="120000"
+				codefile="c:\Users\automation\Documents\ranorex_study_2_13\StudyRanorex\StudyRanorex\FLL_JFK.cs"
+				codeline="70"
+				loglvl="Success"/>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="01:06.042"
+			timeRelativeToTestModuleStartTime="01:06.043"
+			timeWallClock="21:11:23"
+			time="01:06.042"
+			level="Success"
+			category="Validation">
+			<message>
+				Element for item 'lnkLowestFare' does exist.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/dom[@domain='www.aa.com']/body/div/div/div/div[#'matrix_date_search']/div/div/div/div/ul/li/a[@innertext~'Lowest\ Fare']"
+				fullname="StudyRanorexRepository.AA.SearchResults.lnkLowestFare"
+				id="983b43b5275c4c8bba94944da864f817"
+				timeout="90000"
+				codefile="c:\Users\automation\Documents\ranorex_study_2_13\StudyRanorex\StudyRanorex\FLL_JFK.cs"
+				codeline="73"
+				loglvl="Success"/>
+		</item>
+	</activity>
+</report>

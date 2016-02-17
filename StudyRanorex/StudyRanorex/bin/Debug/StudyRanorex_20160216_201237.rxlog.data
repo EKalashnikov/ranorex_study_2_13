@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<report>
+	<activity
+		result="Success"
+		duration="0ms"
+		durationms="0"
+		type="root"
+		rid="82728b866f2d94a"
+		totalerrorcount="1"
+		totalwarningcount="0"
+		totalsuccesscount="2"
+		totalfailedcount="1"
+		totalblockedcount="0"
+		user="automation"
+		host="DESKTOP-IP0304R"
+		rxversion="5.4.0.24580"
+		osversion="Windows 10 64bit"
+		runtimeversion="4.0.30319.42000"
+		procarch="32bit"
+		language="en-US"
+		screenresolution="1024x768"
+		timestamp="2/16/2016 8:12:37 PM"
+		timestampiso="2016-02-17T01:12:37"
+		timeoutfactor="1">
+		<detail>
+			Ranorex Testscript
+		</detail>
+		<activity
+			result="Failed"
+			duration="1.5m"
+			durationms="88976"
+			type="test suite"
+			rid="94354564e6cfe20"
+			totalerrorcount="1"
+			totalwarningcount="0"
+			totalsuccesscount="2"
+			totalfailedcount="1"
+			totalblockedcount="0"
+			testsuitename="StudyRanorex"
+			runconfigname="TestRun"
+			runlabel=""
+			maxchildren="3">
+			<params/>
+			<detail>
+			</detail>
+			<activity
+				result="Success"
+				duration="621ms"
+				durationms="621"
+				type="test case"
+				rid="20fa22d16714d6c8"
+				totalerrorcount="0"
+				totalwarningcount="0"
+				totalsuccesscount="1"
+				totalfailedcount="0"
+				totalblockedcount="0"
+				testcasename="OpenAA"
+				testcaseid="3cdb1cbe-2784-451d-b695-ef465dda7dc0"
+				maxchildren="0">
+				<params/>
+				<detail>
+				</detail>
+				<activity
+					result="Success"
+					duration="321ms"
+					durationms="321"
+					type="test module"
+					rid="1e483eecb31f1f97"
+					totalerrorcount="0"
+					totalwarningcount="0"
+					totalsuccesscount="0"
+					totalfailedcount="0"
+					totalblockedcount="0"
+					modulename="OpenBrowser"
+					moduleid="f75b2692-1135-426f-b578-6047ed5e335e"
+					moduletype="UserCode">
+					<detail>
+					</detail>
+					<varbindings/>
+				</activity>
+			</activity>
+			<activity
+				result="Success"
+				duration="19.3s"
+				durationms="19301"
+				type="test case"
+				rid="294a25930f014f74"
+				totalerrorcount="0"
+				totalwarningcount="0"
+				totalsuccesscount="1"
+				totalfailedcount="0"
+				totalblockedcount="0"
+				testcasename="LoginWrongCreds"
+				testcaseid="070d55a8-8b1b-44d2-b9e9-c7af295e3e46"
+				maxchildren="0">
+				<params/>
+				<detail>
+				</detail>
+				<activity
+					result="Success"
+					duration="19.2s"
+					durationms="19195"
+					type="test module"
+					rid="15729de007da9cd"
+					totalerrorcount="0"
+					totalwarningcount="0"
+					totalsuccesscount="0"
+					totalfailedcount="0"
+					totalblockedcount="0"
+					modulename="LoginModule"
+					moduleid="c3f82d89-8032-43e0-b269-57e0ed096d53"
+					moduletype="UserCode">
+					<detail>
+					</detail>
+					<varbindings/>
+					<item
+						timeRelativeToTestSuiteStartTime="00:20.469"
+						timeRelativeToTestModuleStartTime="00:17.609"
+						timeWallClock="20:12:57"
+						time="00:20.469"
+						level="Success"
+						category="Validation">
+						<message>
+							Element for item 'txtCantLogin' does exist.
+						</message>
+						<metainfo
+							type="repoitem"
+							path="/dom[@domain='www.aa.com']/body/div/div[@id='loginMainErrorMsgDialog']/div/p[@innertext~'couldn''t\ log' and @innertext~'account']"
+							fullname="StudyRanorexRepository.AA.WrongCredsPage.Popup.txtCantLogin"
+							id="6e3206ca1d464d6191cfba63b0026456"
+							timeout="120000"
+							codefile="c:\Users\automation\Documents\ranorex_study_2_13\StudyRanorex\StudyRanorex\LoginModule.cs"
+							codeline="64"
+							loglvl="Success"/>
+					</item>
+				</activity>
+			</activity>
+			<activity
+				result="Failed"
+				duration="1.1m"
+				durationms="67178"
+				type="test case"
+				rid="3294e0a4901bf1a7"
+				totalerrorcount="1"
+				totalwarningcount="0"
+				totalsuccesscount="0"
+				totalfailedcount="1"
+				totalblockedcount="0"
+				testcasename="TicketsSearch"
+				testcaseid="a9431c76-ed46-40ff-8372-d28d019f2697"
+				maxchildren="0">
+				<params/>
+				<detail>
+				</detail>
+				<activity
+					result="Failed"
+					duration="1.1m"
+					durationms="67160"
+					type="test module"
+					rid="2d2f6058df98b97c"
+					totalerrorcount="1"
+					totalwarningcount="0"
+					totalsuccesscount="0"
+					totalfailedcount="0"
+					totalblockedcount="0"
+					modulename="FLL_JFK"
+					moduleid="f5226f6d-9f9c-4f63-9b73-5881852d4a42"
+					moduletype="UserCode">
+					<detail>
+					</detail>
+					<errmsg>
+						Failed to find item 'StudyRanorexRepository.AADocuments.Waiting'.
+					</errmsg>
+					<varbindings/>
+					<item
+						timeRelativeToTestSuiteStartTime="01:29.140"
+						timeRelativeToTestModuleStartTime="01:07.072"
+						timeWallClock="20:14:06"
+						time="01:29.140"
+						level="Error"
+						category="Module"
+						errimg="images_StudyRanorex_20160216_201237\StudyRanorex_20160216_201237_8c6c9d11_trace.jpg"
+						errthumb="images_StudyRanorex_20160216_201237\StudyRanorex_20160216_201237_8c6c9d11_trace_thumb.jpg">
+						<message>
+							Failed to find item 'StudyRanorexRepository.AADocuments.Waiting'.<br/>No element found for path '/dom[@domain='www.aa.com' and @caption~'We']' within 30s.
+						</message>
+						<metainfo
+							stacktrace="   at Ranorex.Core.Repository.RepoItemInfo.Find[T](Boolean findSingle, Boolean throwException, Duration effectiveTimeoutOverride)
+   at Ranorex.Core.Repository.RepoItemInfo.CreateAdapter[T](Boolean throwException, Duration waitTimeout)
+   at Ranorex.Core.Repository.RepoItemInfo.CreateAdapter[T](Boolean throwException)
+   at StudyRanorex.StudyRanorexRepositoryFolders.AADocumentsAppFolder.get_Waiting() in c:\Users\automation\Documents\ranorex_study_2_13\StudyRanorex\StudyRanorex\StudyRanorexRepository.cs:line 1033
+   at StudyRanorex.FLL_JFK.Ranorex.Core.Testing.ITestModule.Run() in c:\Users\automation\Documents\ranorex_study_2_13\StudyRanorex\StudyRanorex\FLL_JFK.cs:line 65
+   at Ranorex.Core.Testing.TestSuiteModule.RunInternal(DataContext parentDataContext)"
+							codefile="c:\Users\automation\Documents\ranorex_study_2_13\StudyRanorex\StudyRanorex\FLL_JFK.cs"
+							codeline="65"
+							type="repoitem"
+							path="/dom[@domain='www.aa.com' and @caption~'We']"
+							fullname="StudyRanorexRepository.AADocuments.Waiting"
+							id="43cac663da5a44c6853a4254d5d4a903"
+							timeout="60000"
+							loglvl="Error"/>
+					</item>
+				</activity>
+			</activity>
+		</activity>
+	</activity>
+</report>

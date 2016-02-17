@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<report>
+	<activity
+		result="Success"
+		duration="0ms"
+		durationms="0"
+		type="root"
+		rid="fab883a6a6d488"
+		totalerrorcount="0"
+		totalwarningcount="0"
+		totalsuccesscount="0"
+		totalfailedcount="0"
+		totalblockedcount="0"
+		user="automation"
+		host="DESKTOP-IP0304R"
+		rxversion="5.4.0.24580"
+		osversion="Windows 10 64bit"
+		runtimeversion="4.0.30319.42000"
+		procarch="32bit"
+		language="en-US"
+		screenresolution="1024x768"
+		timestamp="2/16/2016 8:20:42 PM"
+		timestampiso="2016-02-17T01:20:42"
+		timeoutfactor="1"
+		module="FLL_JFK">
+		<detail>
+			FLL_JFK
+		</detail>
+		<varbindings/>
+		<item
+			timeRelativeToTestSuiteStartTime="00:52.658"
+			timeRelativeToTestModuleStartTime="00:52.658"
+			timeWallClock="20:21:35"
+			time="00:52.658"
+			level="Success"
+			category="Validation">
+			<message>
+				Element for item 'tabRefundable' does exist.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/dom[@domain='www.aa.com']/body/div/div/div/div[#'matrix_date_search']/div/div/div/div[#'aa-matrix-departure-flights']/div/form[#'matrixRefundableFlightSearchDepartureForm']"
+				fullname="StudyRanorexRepository.AA.Results.tabs.tabRefundable"
+				id="775ee7ba882f4dd687fb52d01ffdaa71"
+				timeout="120000"
+				codefile="c:\Users\automation\Documents\ranorex_study_2_13\StudyRanorex\StudyRanorex\FLL_JFK.cs"
+				codeline="69"
+				loglvl="Success"/>
+		</item>
+	</activity>
+</report>

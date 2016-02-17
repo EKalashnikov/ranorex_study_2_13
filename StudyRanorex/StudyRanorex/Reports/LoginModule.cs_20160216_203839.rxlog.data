@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<report>
+	<activity
+		result="Failed"
+		duration="0ms"
+		durationms="0"
+		type="root"
+		rid="4989b7f5c43e658"
+		totalerrorcount="1"
+		totalwarningcount="0"
+		totalsuccesscount="0"
+		totalfailedcount="0"
+		totalblockedcount="0"
+		user="automation"
+		host="DESKTOP-IP0304R"
+		rxversion="5.4.0.24580"
+		osversion="Windows 10 64bit"
+		runtimeversion="4.0.30319.42000"
+		procarch="32bit"
+		language="en-US"
+		screenresolution="1024x768"
+		timestamp="2/16/2016 8:38:44 PM"
+		timestampiso="2016-02-17T01:38:44"
+		timeoutfactor="1"
+		module="LoginModule">
+		<detail>
+			LoginModule
+		</detail>
+		<errmsg>
+			Failed to find item 'StudyRanorexRepository.AA.MainMenu.lnkHome'.
+		</errmsg>
+		<varbindings/>
+		<item
+			timeRelativeToTestSuiteStartTime="00:09.514"
+			timeRelativeToTestModuleStartTime="00:09.514"
+			timeWallClock="20:38:54"
+			time="00:09.514"
+			level="Success"
+			category="Validation"
+			errimg=".\LoginModule.cs_20160216_203839_467bcf32_trace.jpg"
+			errthumb=".\LoginModule.cs_20160216_203839_467bcf32_trace_thumb.jpg">
+			<message>
+				Element for item 'txtCantLogin' does exist.
+			</message>
+			<metainfo
+				type="repoitem"
+				path="/dom[@domain='www.aa.com']/body/div/div[@id='loginMainErrorMsgDialog']/div/p[@innertext~'couldn''t\ log' and @innertext~'account']"
+				fullname="StudyRanorexRepository.AA.WrongCredsPage.Popup.txtCantLogin"
+				id="6e3206ca1d464d6191cfba63b0026456"
+				timeout="120000"
+				codefile="c:\Users\automation\Documents\ranorex_study_2_13\StudyRanorex\StudyRanorex\LoginModule.cs"
+				codeline="64"
+				loglvl="Success"/>
+		</item>
+		<item
+			timeRelativeToTestSuiteStartTime="01:10.374"
+			timeRelativeToTestModuleStartTime="01:10.374"
+			timeWallClock="20:39:55"
+			time="01:10.374"
+			level="Error"
+			category="Module"
+			errimg=".\LoginModule.cs_20160216_203839_911d6164_trace.jpg"
+			errthumb=".\LoginModule.cs_20160216_203839_911d6164_trace_thumb.jpg">
+			<message>
+				Failed to find item 'StudyRanorexRepository.AA.MainMenu.lnkHome'.<br/>No element found for path 'body/div/header/div/div[#'main-navigation']/a[@href='https://www.aa.com/homePage.do']/img' within 1m.
+			</message>
+			<metainfo
+				stacktrace="   at Ranorex.Core.Repository.RepoItemInfo.Find[T](Boolean findSingle, Boolean throwException, Duration effectiveTimeoutOverride)
+   at Ranorex.Core.Repository.RepoItemInfo.CreateAdapter[T](Boolean throwException, Duration waitTimeout)
+   at Ranorex.Core.Repository.RepoItemInfo.CreateAdapter[T](Boolean throwException)
+   at StudyRanorex.StudyRanorexRepositoryFolders.MainMenuFolder.get_lnkHome() in c:\Users\automation\Documents\ranorex_study_2_13\StudyRanorex\StudyRanorex\StudyRanorexRepository.cs:line 965
+   at StudyRanorex.LoginModule.Ranorex.Core.Testing.ITestModule.Run() in c:\Users\automation\Documents\ranorex_study_2_13\StudyRanorex\StudyRanorex\LoginModule.cs:line 67
+   at Ranorex.Core.Testing.TestSuiteModule.RunInternal(DataContext parentDataContext)"
+				codefile="c:\Users\automation\Documents\ranorex_study_2_13\StudyRanorex\StudyRanorex\LoginModule.cs"
+				codeline="67"
+				type="repoitem"
+				path="/dom[@domain='www.aa.com']/body/div/header/div/div[#'main-navigation']/a[@href='https://www.aa.com/homePage.do']/img"
+				fullname="StudyRanorexRepository.AA.MainMenu.lnkHome"
+				id="d43189e216d046318f6947b8a45d9f26"
+				timeout="90000"
+				loglvl="Error"/>
+		</item>
+	</activity>
+</report>

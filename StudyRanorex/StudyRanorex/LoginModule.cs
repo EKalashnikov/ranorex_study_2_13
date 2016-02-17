@@ -43,28 +43,31 @@ namespace StudyRanorex
         /// that will in turn invoke this method.</remarks>
         void ITestModule.Run()
         {
-            Mouse.DefaultMoveTime = 300;
-            Keyboard.DefaultKeyPressTime = 100;
+            Mouse.DefaultMoveTime = 30;
+            Keyboard.DefaultKeyPressTime = 10;
             Delay.SpeedFactor = 1.0;
             
             Mouse.ScrollWheel(1000);
             
-            
-            repo.AA.HomePage.LoginPanel.FieldUserName.Click();
-            repo.AA.HomePage.LoginPanel.FieldUserName.PressKeys("username");
-            repo.AA.HomePage.LoginPanel.FieldLastName.Click();
-            repo.AA.HomePage.LoginPanel.FieldLastName.PressKeys("lastname");
-            repo.AA.HomePage.LoginPanel.FieldPwd.Click();
-            repo.AA.HomePage.LoginPanel.FieldPwd.PressKeys("pwd");
-            repo.AA.HomePage.LoginPanel.BtnLogIn.Click();
+            //entering credentials
+            repo.AA.HomePage.LoginPanel.fldUserName.Click();
+            repo.AA.HomePage.LoginPanel.fldUserName.PressKeys("username");
+            repo.AA.HomePage.LoginPanel.fldLastName.Click();
+            repo.AA.HomePage.LoginPanel.fldLastName.PressKeys("lastname");
+            repo.AA.HomePage.LoginPanel.fldPwd.Click();
+            repo.AA.HomePage.LoginPanel.fldPwd.PressKeys("pwd");
+            repo.AA.HomePage.LoginPanel.btnLogIn.Click();
             
             //Delay.Duration(new Duration(10));
             //Delay.Milliseconds(1999);
-            repo.AA.WrongCredsPage.Popup.txtCantLogin.MoveTo();
+            
+            //checking poput text and closing popup
             Validate.Exists(repo.AA.WrongCredsPage.Popup.txtCantLoginInfo);
+            repo.AA.WrongCredsPage.Popup.txtCantLogin.MoveTo();
             repo.AA.WrongCredsPage.Popup.btnClosePopup.Click();
                        
-            repo.AA.WrongCredsPage.MainPage.HomePageLink.Click();
+            //returing to home page
+            repo.AA.MainMenu.lnkHome.Click();
             
             
             	
